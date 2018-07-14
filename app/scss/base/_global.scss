@@ -3,20 +3,18 @@
     font-weight: normal;
 }
 
-body {
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;    
-}
-
 a,
 button {
     outline: 0 !important;
+    @include transition;
 }
 
 a:hover,
-a:focus {
+a:focus,
+button:hover,
+button:focus {
     text-decoration: none;
+    outline: none;
 }
 
 .icon {

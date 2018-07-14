@@ -6,21 +6,19 @@
     .Menu-item {
         position: relative;
         border: 1px solid transparent;
-        color: #fff;
+        color: $primary-color;
         text-decoration: none;
-        font-size: em(18px);
-        font-family: 'Open Sans', sans-serif;
+        font-family: $default-font;
+        font-weight: bold;
         text-transform: uppercase;
-        letter-spacing: 2px;
         
         &:hover {
-            border: none;
-        
+            color: $secondary-color;
             .line-1 {
                 animation: move1 1500ms infinite ease;
             }
             
-            .line-2 {
+            .line-2 { 
                 animation: move2 1500ms infinite ease;
             }
             
@@ -39,7 +37,7 @@
         display: block;
         position: absolute;
         width: 1px;
-        background-color: white;
+        background-color: currentColor;
         left: 0;
         bottom: 0;
     }
@@ -48,7 +46,7 @@
         display: block;
         position: absolute;
         height: 1px;
-        background-color: white;
+        background-color: currentColor;
         left: 0;
         top: 0;
     }
@@ -57,7 +55,7 @@
         display: block;
         position: absolute;
         width: 1px;
-        background-color: white;
+        background-color: currentColor;
         right: 0;
         top: 0;
     }
@@ -66,7 +64,7 @@
         display: block;
         position: absolute;
         height: 1px;
-        background-color: white;
+        background-color: currentColor;
         right: 0;
         bottom: 0;
     }
