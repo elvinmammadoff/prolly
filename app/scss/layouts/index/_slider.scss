@@ -1,11 +1,130 @@
 .Slider {
 
-    .owl-carousel {
-        margin: 2rem 0;
-        .item {
-            height: 20rem;
-            background: #4DC7A0;
-            padding: 1rem
-        }
+    &-item {
+        height: 38em;
+        background: #4DC7A0;
+
+        //== Slider image effect on hover ==//
+
+        /* Common style */
+
+        figure {
+            position: relative;
+            overflow: hidden;
+            background: #3085a3;
+            text-align: center;
+            cursor: pointer;
+            height: 100%;
+            img {
+                position: relative;
+                display: block;
+                height: 100%;
+                max-width: 100%;
+                opacity: 0.8;
+                object-fit: cover;
+            } 
+            h3 {
+                word-spacing: -0.15em;
+                font-weight: 300;
+                margin: 0;                 
+            }                  
+            figcaption {
+                padding: 2em;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 1.25em;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                &:after, &:before {
+                    pointer-events: none;                        
+                }
+                & > a {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;     
+
+                /* Anchor will cover the whole item by default */  
+                
+                    z-index: 1000;
+                    text-indent: 200%;
+                    white-space: nowrap;
+                    font-size: 0;
+                    opacity: 0;                        
+                }
+            }  
+
+            /*---------------*/
+            /***** Prolly Effect *****/
+            /*---------------*/
+
+            &.effect-prolly {
+                img {
+                    -webkit-transition: opacity 0.35s, 
+                    -webkit-transform 0.35s;
+                    transition: opacity 0.35s, transform 0.35s;
+                    -webkit-transform: scale(1.12);
+                    transform: scale(1.12);
+                }    
+                &:hover {
+                    img {
+                        opacity: 0.5;
+                        -webkit-transform: scale(1);
+                        transform: scale(1);
+                    }   
+                    p {
+                        opacity: 1;
+                        -webkit-transform: scale(1);
+                        transform: scale(1);
+                    }   
+                    figcaption {
+                        &:before {
+                            opacity: 1;
+                            -webkit-transform: scale(1);
+                            transform: scale(1);
+                        } 
+                    }                                                                      
+                } 
+                figcaption {
+                    padding: 3em;
+                    &:before {
+                        position: absolute;
+                        top: 30px;
+                        right: 30px;
+                        bottom: 30px;
+                        left: 30px;
+                        border: 1px solid #fff;
+                        content: '';
+                        -webkit-transform: scale(1.1);
+                        transform: scale(1.1);
+                        opacity: 0;
+                        -webkit-transition: opacity 0.35s, 
+                        -webkit-transform 0.35s;
+                        transition: opacity 0.35s, transform 0.35s;
+                    }
+                }  
+                p {
+                    opacity: 0;
+                    -webkit-transition: opacity 0.35s, 
+                    -webkit-transform 0.35s;
+                    transition: opacity 0.35s, transform 0.35s;                        
+                }    
+                h3 {
+                    padding: 20% 0 20px 0;
+                }    
+                span {
+                    margin: 0 auto;
+                    max-width: 200px;
+                    -webkit-transform: scale(1.5);
+                    transform: scale(1.5);
+                }                                                                
+            }                 
+        }            
     }
 }

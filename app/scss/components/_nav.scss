@@ -1,5 +1,5 @@
   
-//   Nav menu item outline animation on hover
+//== Nav menu item outline animation on hover ==//
 
 .Menu {
 
@@ -11,9 +11,14 @@
     font-family: $default-font;
     font-weight: bold;
     text-transform: uppercase;
-    
+    @include transition;
+
+
+    //== Menu item outline animation on hover ==//    
+
     &:hover {
         color: $secondary-color;
+        @include transition;
         .line-1 {
             animation: move1 1500ms infinite ease;
         }
@@ -39,6 +44,7 @@
         background-color: currentColor;
         left: 0;
         bottom: 0;
+        @include transition;
     }
     .line-2 {
         content: "";
@@ -48,6 +54,7 @@
         background-color: currentColor;
         left: 0;
         top: 0;
+        @include transition;
     }
     .line-3 {
         content: "";
@@ -57,6 +64,7 @@
         background-color: currentColor;
         right: 0;
         top: 0;
+        @include transition;
     }
     .line-4 {
         content: "";
@@ -66,6 +74,7 @@
         background-color: currentColor;
         right: 0;
         bottom: 0;
+        @include transition;
     }
   }
 }
