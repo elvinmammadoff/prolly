@@ -3,18 +3,41 @@ $(document).ready(function(){
 	// Stage Padding Owl Carousel Slider	
 
 	$('.Slider .owl-carousel').owlCarousel({
-		stagePadding: 600,
+		items: 1,
+		stagePadding: 100,
 		loop:true,
 		margin:40,
-		responsive:{
-			0:{
-				items:1
+		responsiveClass: true,
+		responsiveRefreshRate: true,
+		responsive : {
+			0 : {
+				items: 1,
+				margin:20,
+				stagePadding: 0,
 			},
-			600:{
-				items:3
+			768 : {
+				items: 1,
+				stagePadding: 250,
 			},
-			1000:{
-				items:1
+			960 : {
+				items: 1,
+				stagePadding: 250,
+			},
+			1200 : {
+				items: 1,
+				stagePadding: 400,
+			},
+			1400 : {
+				items: 1,
+				stagePadding: 400,
+			},
+			1600 : {
+				items: 1,
+				stagePadding: 500,
+			},
+			1920 : {
+				items: 2,
+				stagePadding: 400,
 			}
 		}
 	})	
