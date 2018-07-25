@@ -18,7 +18,6 @@
 
     &:hover {
         color: $secondary-color;
-        @include transition;
         .line-1 {
             animation: move1 1500ms infinite ease;
         }

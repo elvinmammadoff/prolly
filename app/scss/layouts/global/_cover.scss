@@ -1,0 +1,20 @@
+.Cover {
+    height: 250px;
+    width: 100%;
+    position: relative;
+    background: url(../../../img/cover/Category-photo.jpg) no-repeat top center / cover;
+    &__content {
+        &--border {
+            padding: 0.625em 0 0.625em 2.188em;
+            border-left: 4px solid $secondary-color;
+        }
+    }
+    &__title {
+        color: white;
+        font-size: 1.688em;
+        word-spacing: 0.013em;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+}

@@ -1,8 +1,25 @@
+// Header Styles
 .Header {
+    // Logo Styles
     &__logo {
         display: block;
         background: url("../img/Logo.png") no-repeat;
         width: 199px;
         height: 45px;
+    }
+    // Sticky Header Styles
+    &.sticky-header {
+        padding: 3rem 0;
+        &.is-sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 0;
+            z-index: 2;
+            @include stickyHeader;
+            box-shadow: 0px 5px 9px 1px rgba(144, 161, 180, 0.2);
+            background-color: white;
+        }
     }
 }

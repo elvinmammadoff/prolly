@@ -1,130 +1,156 @@
+// Slider Styles
 .Slider {
 
-    &-item {
+    // Common style 
+    
+    &__effect {
+        position: relative;
+        overflow: hidden;
+        background: #3085a3;
+        text-align: center;
+        height: 100%;
+    }
+    &__img {
+        position: relative;
+        display: block;
+        height: 100%;
+        max-width: 100%;
+        opacity: 0.8;
+        object-fit: cover;
+    } 
+    &__title {
+        font-size: 1.69em; 
+        word-spacing: 0.2em;
+        font-weight: 700;
+        margin: 0;   
+        text-transform: uppercase;              
+    }                  
+    &__caption {
+        padding: 2em;
+        color: #fff;
+        font-size: 1.25em;
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        &:after, &:before {
+            pointer-events: none;                        
+        }
+    }
+    &__button {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        font-size: 0.9em;
+        word-spacing: 0.2em;
+        color: white;
+        background-color: transparent;
+        padding: 0.25em 0.625em;   
+        text-transform: capitalize;     
+        margin-top: 0.5em;
+        border: 1px solid $secondary-color;
+        &:hover {
+            color: white;
+            background-color: $secondary-color;
+            transform: translateY(3px);     
+            box-shadow: 0px 9px 17px -3px rgba(0,0,0,0.13);                 
+        }
+    } 
+
+    &__item {
         height: 38em;
-        background: #4DC7A0;
+        background: #4DC7A0; 
 
-        //== Slider image effect on hover ==//
+    // Slider image effect on hover
 
-        /* Common style */
+        //Prolly Effect 
 
-        figure {
-            position: relative;
-            overflow: hidden;
-            background: #3085a3;
-            text-align: center;
-            cursor: pointer;
-            height: 100%;
-            img {
-                position: relative;
-                display: block;
-                height: 100%;
-                max-width: 100%;
-                opacity: 0.8;
-                object-fit: cover;
-            } 
-            h3 {
-                word-spacing: -0.15em;
-                font-weight: 300;
-                margin: 0;                 
-            }                  
-            figcaption {
-                padding: 2em;
-                color: #fff;
-                text-transform: uppercase;
-                font-size: 1.25em;
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                &:after, &:before {
-                    pointer-events: none;                        
-                }
-                & > a {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;     
+        .effect-prolly {
 
-                /* Anchor will cover the whole item by default */  
-                
-                    z-index: 1000;
-                    text-indent: 200%;
-                    white-space: nowrap;
-                    font-size: 0;
-                    opacity: 0;                        
-                }
-            }  
-
-            /*---------------*/
-            /***** Prolly Effect *****/
-            /*---------------*/
-
-            &.effect-prolly {
-                img {
-                    -webkit-transition: opacity 0.35s, 
-                    -webkit-transform 0.35s;
-                    transition: opacity 0.35s, transform 0.35s;
-                    -webkit-transform: scale(1.12);
-                    transform: scale(1.12);
-                }    
-                &:hover {
-                    img {
+            &__img {
+                transition: opacity 0.35s, transform 0.35s;
+                transform: scale(1.12);
+            }    
+            &:hover {
+                .effect-prolly {
+                    &__img {
                         opacity: 0.5;
-                        -webkit-transform: scale(1);
                         transform: scale(1);
                     }   
-                    p {
-                        opacity: 1;
-                        -webkit-transform: scale(1);
-                        transform: scale(1);
-                    }   
-                    figcaption {
-                        &:before {
-                            opacity: 1;
-                            -webkit-transform: scale(1);
-                            transform: scale(1);
-                        } 
-                    }                                                                      
-                } 
-                figcaption {
-                    padding: 3em;
-                    &:before {
-                        position: absolute;
-                        top: 30px;
-                        right: 30px;
-                        bottom: 30px;
-                        left: 30px;
-                        border: 1px solid #fff;
-                        content: '';
-                        -webkit-transform: scale(1.1);
-                        transform: scale(1.1);
-                        opacity: 0;
-                        -webkit-transition: opacity 0.35s, 
-                        -webkit-transform 0.35s;
-                        transition: opacity 0.35s, transform 0.35s;
-                    }
-                }  
-                p {
-                    opacity: 0;
-                    -webkit-transition: opacity 0.35s, 
-                    -webkit-transform 0.35s;
-                    transition: opacity 0.35s, transform 0.35s;                        
-                }    
-                h3 {
-                    padding: 20% 0 20px 0;
-                }    
-                span {
-                    margin: 0 auto;
-                    max-width: 200px;
-                    -webkit-transform: scale(1.5);
-                    transform: scale(1.5);
-                }                                                                
+                }                                                                     
+            } 
+            &__caption {
+                padding: 3em;
+                &:before {
+                    position: absolute;
+                    top: 1em;
+                    right: 1em;
+                    bottom: 1em;
+                    left: 1em;
+                    border: 1px solid #fff;
+                    content: '';
+                    transform: scale(1);
+                    transition: opacity 0.35s, transform 0.35s;
+                }
+            }   
+            &__title {
+                padding: 20% 0 0 0;
             }                 
         }            
+    }
+}
+
+//  Button Ripple Effect 
+
+.ripple {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    position: absolute;
+    opacity: 1;
+}
+.rippleEffect {
+    animation: rippleDrop .6s linear;
+}
+
+@keyframes rippleDrop {
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+
+// Owl Carousel 
+
+.owl {
+    &-carousel {
+        position: relative;
+    }
+    &-dots {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 0 2.5em;
+    }
+    &-dot {
+        span {
+            width: 1em!important;
+            height: 1em!important;
+            margin: 0 0.5em!important;
+            background-color: white!important;
+            opacity: 1!important;
+        } 
+        &.active, &:hover {
+            span {
+                background: none!important;;
+                border: 2px solid white!important;;
+            }
+        }   
     }
 }

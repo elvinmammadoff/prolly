@@ -1,6 +1,12 @@
-
+// Body Styles
 body {
+    // For Font Smoothing Styles
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;    
+    -moz-osx-font-smoothing: grayscale;  
+
+    font-family: $default-font;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
 }
