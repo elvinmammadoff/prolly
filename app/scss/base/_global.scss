@@ -2,12 +2,19 @@
 * {
     outline: 0 !important;
     font-weight: normal;
+    word-spacing: 0.2rem;
 }
 
 a,
 button {
     outline: 0 !important;
-    @include transition;
+    @include transition03S;
+}
+
+button {
+    &:focus {
+        box-shadow: none!important;        
+    }
 }
 
 a:hover,
@@ -20,9 +27,70 @@ button:focus {
 
 .icon {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 1.250rem;
+    height: 1.250rem;
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
 }
+
+.img100 {
+    width: 100%;
+}
+
+.title {
+    font-size: 2.188rem;
+    color: $primary-color;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.link {
+    &-out {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+    }
+}
+
+.social {
+    color: $text2;
+    &__item {
+        margin-left: 0.625rem;
+        .icon {
+            width: 1.125rem;
+            height: 1.125rem;
+        }
+    }
+    &--white {
+        .social {
+            &__item {
+                color: white;  
+                &:hover {
+                    color: $secondary-color;
+                }              
+            }
+        }
+    }
+    &--blue {
+        .social {
+            &__item {
+                color: $text2;    
+                &:hover {
+                    color: $darkenBlue;
+                }            
+            }
+        }
+    }
+}
+
+.title {
+    &--mini {
+        font-size: 1.188rem;
+        font-weight: 500;
+        color: $primary-color;
+        margin-bottom: 1.063em;
+    }    
+}
+

@@ -2,7 +2,7 @@
 .Slider {
 
     // Common style 
-    
+    margin: 9.625rem 0 5rem;
     &__effect {
         position: relative;
         overflow: hidden;
@@ -19,16 +19,15 @@
         object-fit: cover;
     } 
     &__title {
-        font-size: 1.69em; 
-        word-spacing: 0.2em;
+        font-size: 1.69rem; 
         font-weight: 700;
         margin: 0;   
         text-transform: uppercase;              
     }                  
     &__caption {
-        padding: 2em;
+        padding: 2rem;
         color: #fff;
-        font-size: 1.25em;
+        font-size: 1.25rem;
         backface-visibility: hidden;
         position: absolute;
         top: 0;
@@ -43,24 +42,23 @@
         position: relative;
         display: inline-block;
         overflow: hidden;
-        font-size: 0.9em;
-        word-spacing: 0.2em;
+        font-size: 0.9rem;
         color: white;
         background-color: transparent;
-        padding: 0.25em 0.625em;   
+        padding: 0.25rem 0.625rem;   
         text-transform: capitalize;     
-        margin-top: 0.5em;
-        border: 1px solid $secondary-color;
+        margin-top: 0.5rem;
+        border: 0.063rem solid $secondary-color;
         &:hover {
             color: white;
             background-color: $secondary-color;
-            transform: translateY(3px);     
-            box-shadow: 0px 9px 17px -3px rgba(0,0,0,0.13);                 
+            transform: translateY(0.188em);     
+            box-shadow: 0 0.563rem 1.063rem -0.188rem rgba(0,0,0,0.13);                 
         }
     } 
 
     &__item {
-        height: 38em;
+        height: 38rem;
         background: #4DC7A0; 
 
     // Slider image effect on hover
@@ -82,14 +80,14 @@
                 }                                                                     
             } 
             &__caption {
-                padding: 3em;
+                padding: 3rem;
                 &:before {
                     position: absolute;
-                    top: 1em;
-                    right: 1em;
-                    bottom: 1em;
-                    left: 1em;
-                    border: 1px solid #fff;
+                    top: 1rem;
+                    right: 1rem;
+                    bottom: 1rem;
+                    left: 1rem;
+                    border: 0.063rem solid #fff;
                     content: '';
                     transform: scale(1);
                     transition: opacity 0.35s, transform 0.35s;
@@ -136,20 +134,20 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        margin: 0 0 2.5em;
+        margin: 0 0 2.5rem;
     }
     &-dot {
         span {
-            width: 1em!important;
-            height: 1em!important;
-            margin: 0 0.5em!important;
+            width: 1rem!important;
+            height: 1rem!important;
+            margin: 0 0.5rem!important;
             background-color: white!important;
             opacity: 1!important;
         } 
         &.active, &:hover {
             span {
                 background: none!important;;
-                border: 2px solid white!important;;
+                border: 0.125rem solid white!important;;
             }
         }   
     }

@@ -1,0 +1,71 @@
+
+// Image Effects Styles
+.image {
+    &-line {
+        position: relative;
+        @include transition03S;     
+        &:before, &:after {
+            position: absolute;
+            content: "";
+            right: 0;
+            top: 0;
+            background-color: $secondary-color;
+            @include transition03S;         
+        }
+        &:before {
+            height: 100%;
+            width: 0.188rem;    
+            right: 50%;        
+        }
+        &:after {
+            width: 50%;
+            height: 0.188rem;    
+            right: auto;
+            left: 0;        
+        }
+        &:hover {
+            &:before {
+                height: 0%;                
+            }
+            &:after {
+                width: 0%;   
+                right: 50%;
+                left: auto;                
+            }
+            .Blog {
+                &-details {
+                    &__image {
+                        transform: translateX(-2.25rem);
+                    }
+                }
+            }
+        }
+        &__extra {
+            padding: 1.625rem 2.25em;
+            &:before, &:after {
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: 0;
+                background: $secondary-color;
+                @include transition03S;             
+            }
+            &:before {
+                width: 0.188rem;
+                height: 100%;                
+            }
+            &:after {
+                width: 50%;
+                height: 0.188rem;                
+            }
+            &:hover {
+                &:before {
+                    height: 0%;                    
+                }
+                &:after {
+                    width: 0%;                    
+                }
+            }
+        }
+    }
+}

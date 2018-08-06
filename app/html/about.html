@@ -1,0 +1,53 @@
+<!-- 1. Head -->
+@@include('_components/_head.html')
+
+<!-- 2. Icons -->
+@@include('_components/_icons.html')
+
+<!-- 3. Header -->
+@@include('_components/_header.html')
+
+<main>
+    <!-- 4. Cover -->
+    @@include('_components/_cover.html', {
+        "about": true
+    })
+    
+    <!-- 5. About Details -->
+    @@include('_components/_about-details.html')
+</main>
+
+<!-- 7. Footer -->
+@@include('_components/_footer.html')
+
+<!-- 8. Foot -->
+@@include('_components/_foot.html')
+
+<script>
+    
+    var $meters = $(".meter > span");
+    var $section = $('#third');
+    var $queue = $({});
+    
+    function loadDaBars() {       
+        $meters.each(function() {
+            var $el = $(this);
+            var origWidth = $el.width();
+            var elementPos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            var animate = $(this).data('animate');
+				if (elementPos < topOfWindow + $(window).height() - 30 && !animate) {
+					$(this).data('animate', true);
+            $el.width(0);
+            $queue.queue(function(next) {
+                $el.animate({width: origWidth}, 1200, next);
+            }).stop();;
+                }
+        });
+    }
+
+		loadDaBars();
+		$(window).scroll(loadDaBars);
+
+   
+</script>

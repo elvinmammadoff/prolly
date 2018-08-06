@@ -1,0 +1,22 @@
+// Buttons Styles
+.button {
+    margin-top: 0.874rem;
+    border-radius: 0;
+    &:hover {
+        box-shadow: 0 0.5rem 1.813rem 0 rgba(0,0,0,.23);        
+    }
+    &--lg {
+        padding: 0.325rem 0.5rem;
+    }
+    &--orange {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+        &:hover {
+            background-color: $button-secondary-bg;
+            border: 1px solid $button-secondary-border;
+        }
+    }
+    &--default {
+        padding: 0.325em 1.367em;
+    }
+}

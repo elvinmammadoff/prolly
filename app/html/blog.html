@@ -7,14 +7,23 @@
 <!-- 3. Header -->
 @@include('_components/_header.html')
 
-<!-- 4. Cover -->
-@@include('_components/_cover.html')
+<main>
+    <!-- 4. Cover -->
+    @@include('_components/_cover.html', {
+        "blog": true
+    })
+    
+    <!-- 5. Blog Post -->
+    @@include('_components/_blog-post.html', {
+        "blog": true
+    })
+    
+    <!-- 6. Pagination -->
+    @@include('_components/_pagination.html')
+</main>
 
-<!-- 5. Blog Post -->
-@@include('_components/_blog-post.html')
-
-<!-- 6. Footer -->
+<!-- 7. Footer -->
 @@include('_components/_footer.html')
 
-<!-- 7. Foot -->
+<!-- 8. Foot -->
 @@include('_components/_foot.html')

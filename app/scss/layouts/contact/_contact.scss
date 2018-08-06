@@ -1,0 +1,80 @@
+// Contact Styles
+.Contact {
+    &__methods {
+        position: relative;
+    }
+    &__form {
+        position: absolute;
+        top: 50%;
+        width: 26.875rem;
+        transform: translateY(-50%);
+        z-index: 1;    
+        box-shadow: 0 0 2.188rem 0 rgba(0,4,2,.22);
+        padding:  1.75rem 2.375rem;
+        background-color: white;  
+    }
+    &-info {
+        padding: 2.5rem 0;
+        &__wrap {
+            margin-top: 1.563rem;            
+        }
+        &__item {
+            padding: 0 5.438rem;
+            a.Contact {
+                &-info {
+                    &__text {
+                        &:hover {
+                            color: $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+        &__icon {
+            width: 6.5rem;
+            height: 6.5rem;
+            border: 0.125rem solid currentColor;
+            color: $secondary-color;
+            position: relative;
+            z-index: 1;
+            @include transition03S;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;             
+                box-shadow: 0 0 0 0.063rem rgba($secondary-color, .1);
+                opacity: 0;
+                transform: scale(0.9);     
+                @include borderRadius50;           
+            }
+            &:hover {
+                background-color: $secondary-color;
+                transform: scale(0.93);
+                color: white;  
+                border-color: $secondary-color;
+                &:after {
+                    animation: circleHoverEffect 1s ease-out 75ms;
+                }              
+            }
+            .icon {
+                height: 4rem;
+                width: 3rem;
+            }
+        }
+        &__text {
+            font-size: 1rem;
+            color: $text2;
+            font-weight: bold;
+            margin-top: 1.875rem;
+        }
+    }
+}
+
+
+
+

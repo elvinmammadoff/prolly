@@ -1,9 +1,43 @@
-<div class="d-flex flex-fill flex-column">
-    <div class="Cover d-flex align-items-center">
+@@if (context.contact){
+    <!-- Start .Cover -->
+    <section class="Cover d-flex align-items-center">
+        <div class="container">
+            <div class="Cover__content Cover__content--border">
+                <h1 class="Cover__title">Contact</h1>
+            </div>
+        </div>
+    </section><!-- End /.Cover -->
+}
+
+@@if (context.blog){
+    <!-- Start .Cover -->
+    <section class="Cover Cover--blog d-flex align-items-center">
         <div class="container">
             <div class="Cover__content Cover__content--border">
                 <h1 class="Cover__title">Blog</h1>
             </div>
         </div>
-    </div>
-</div>
+    </section><!-- End /.Cover -->
+}
+
+@@if (context.blogSingle){
+    <!-- Start .Cover -->
+    <section class="Cover Cover--blog d-flex align-items-center">
+        <div class="container">
+            <div class="Cover__content Cover__content--border">
+                <h1 class="Cover__title">Blog Single</h1>
+            </div>
+        </div>
+    </section><!-- End /.Cover -->
+}
+
+@@if (context.about){
+    <!-- Start .Cover -->
+    <section class="Cover Cover--blog d-flex align-items-center">
+        <div class="container">
+            <div class="Cover__content Cover__content--border">
+                <h1 class="Cover__title">About</h1>
+            </div>
+        </div>
+    </section><!-- End /.Cover -->
+}

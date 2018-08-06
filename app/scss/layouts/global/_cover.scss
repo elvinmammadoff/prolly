@@ -1,20 +1,41 @@
+// Cover Styles
 .Cover {
-    height: 250px;
+    height: 15.625rem;
     width: 100%;
     position: relative;
     background: url(../../../img/cover/Category-photo.jpg) no-repeat top center / cover;
+    margin: 9.625rem 0 2.5rem;
     &__content {
         &--border {
-            padding: 0.625em 0 0.625em 2.188em;
-            border-left: 4px solid $secondary-color;
+            padding: 0.625rem 0 0.625rem 2.188rem;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 0.25rem;
+                background-color: $secondary-color;
+            }
         }
     }
     &__title {
         color: white;
-        font-size: 1.688em;
-        word-spacing: 0.013em;
+        font-size: 1.688rem;
         text-transform: uppercase;
         font-weight: bold;
         margin-bottom: 0;
+    }
+    &:hover {
+        .Cover {
+            &__content {
+                &--border {
+                    &:after {
+                        animation: lineUpDown 2s ease-out infinite alternate;
+                    }
+                }
+            }
+        }
     }
 }

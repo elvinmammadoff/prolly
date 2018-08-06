@@ -1,7 +1,15 @@
-    <!-- Js Files -->
-    <script src="../../js/jquery-2.1.1.min.js"></script>
-    <script src="../../libs/owl.carousel/dist/owl.carousel.min.js"></script>
+@@if !(context.contact){
+    <!-- Js Files -->        
+    <script src="../../js/scripts.min.js"></script>
     <script src="../../js/common.js"></script>
+}
+
+@@if (context.contact){
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxvP66_Xk1ts77oL2Z7EpDxhDD_jMg-D0"></script>
+    <script src="../../js/initGmap.js"></script>
+    <script src="../../js/scripts.min.js"></script>
+    <script src="../../js/common.js"></script>
+}
 
     </body>
 </html>

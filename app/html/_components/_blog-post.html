@@ -1,0 +1,33 @@
+<!-- Start .Blog -->
+<section class="Blog">
+    <div class="container">  
+        
+        <!-- Start .Blog__wrap -->
+        <div class="Blog__wrap d-flex flex-wrap justify-content-between">
+            @@for (var i = 0; i < 4; i++) {
+                
+                <!-- Start .Blog__item -->
+                <div class="Blog__item">
+        
+                    <!-- Start .Blog__head -->
+                    <div class="Blog__header"> 
+                        <a href="/blog-single.html" title="Blog1" class="link-out"></a>
+                        <img src="../../img/blog/Blog-1.jpg" alt="Blog" title="Blog" class="Blog__img img-fluid img100" />
+                    </div><!-- End /.Blog__head -->
+                    
+                    <!-- Start .Blog__body -->
+                    <div class="Blog__body">
+
+                        @@include('_content-details.html')
+
+                        <div class="Blog__footer d-flex justify-content-end">
+                            <a href="/blog-single.html" title="Read More" class="Blog__more">Read More</a>
+                        </div>
+                    </div><!-- End /.Blog__body -->
+                    
+                </div><!-- End /.Blog__item -->
+            }
+        </div><!-- End /.Blog__wrap -->
+        
+    </div>
+</section><!-- End /.Blog -->
