@@ -22,32 +22,3 @@
 
 <!-- 8. Foot -->
 @@include('_components/_foot.html')
-
-<script>
-    
-    var $meters = $(".meter > span");
-    var $section = $('#third');
-    var $queue = $({});
-    
-    function loadDaBars() {       
-        $meters.each(function() {
-            var $el = $(this);
-            var origWidth = $el.width();
-            var elementPos = $(this).offset().top;
-            var topOfWindow = $(window).scrollTop();
-            var animate = $(this).data('animate');
-				if (elementPos < topOfWindow + $(window).height() - 30 && !animate) {
-					$(this).data('animate', true);
-            $el.width(0);
-            $queue.queue(function(next) {
-                $el.animate({width: origWidth}, 1200, next);
-            }).stop();;
-                }
-        });
-    }
-
-		loadDaBars();
-		$(window).scroll(loadDaBars);
-
-   
-</script>

@@ -1,0 +1,64 @@
+.filter {
+    &__content {
+        width: 100%;
+        margin: 0 -1rem;
+    }
+    &__grid {
+        width: calc(100%/3 - 2rem);
+        margin: 1rem;
+        a {
+            width: 100%;
+            display: block;
+        }        
+    }
+    &__group {
+        text-align: center;
+        padding: 0.5rem 0;
+        margin-bottom: 2.625em;
+    }
+    &__button {
+        position: relative;
+        padding: 0.625rem 0;
+        margin: 0 1rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: $secondary-color;
+        cursor: pointer;
+        text-transform: uppercase;
+        &:before, 
+        &:after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 2px;
+            background: $primary-color;
+            transition: all 0.3s ease;
+        }    
+        &:before {
+            top: 0;
+            left: 0;
+        }    
+        &:after {
+            bottom: 0;
+            right: 0;
+        }   
+        &:hover {
+            &:after,
+            &:before {
+                width: 100%;
+            }
+        }        
+        &.active {
+            &:after,
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.single-content img {
+	width: 100%;
+	height: 100%;
+}
+

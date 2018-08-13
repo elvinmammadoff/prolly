@@ -1,14 +1,14 @@
 <!-- 1. Head -->
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
     <head>
 
         <!-- Required meta tags -->
-        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="author" content="">      
 
         <!-- Title -->
         <title>Rafoz Farzo - Photography</title>
@@ -154,7 +154,7 @@
                 </a><!-- End /.Menu-item-->   
 
                 <!-- Start .Menu-item -->
-                <a href="#" title="Gallery" class="Menu-item p-3 d-none d-md-inline-block">
+                <a href="/gallery.html" title="Gallery" class="Menu-item p-3 d-none d-md-inline-block">
                     Gallery
                     <span class="line-1"></span>
                     <span class="line-2"></span>
@@ -206,9 +206,12 @@
         </div>
     </section><!-- End /.Cover -->
 
+
+
     
     <!-- 5. About Details -->
-    <section class="About">
+    <!-- Start .About -->
+<section class="About">
     <div class="container">
 
         <!-- Start .About-details -->
@@ -220,19 +223,24 @@
 
                 <!-- Start .content__col -->
                 <div class="content__col">
+
                     
-                    <!-- Start .image-line -->
-<div class="image-line">
-    <div class="image-line__extra">
-        <img src="../../img/blog/Blog-inside.jpg" class="img-fluid Blog-details__image" alt="Blog" title="Blog">                    
-    </div>
-</div><!-- End /.image-line -->
+
+
+
+    <!-- Start .image-line -->
+    <div class="image-line image-line--vertical">
+        <div class="image-line__extra">
+            <img src="../../img/about/About.jpg" class="img-fluid Blog-details__image" alt="About" title="About">                    
+        </div>
+    </div><!-- End /.image-line -->
+
                     
                 </div>
                 <!-- End .content__col -->
     
                 <!-- Start .content__col -->
-                <div class="content__col d-flex flex-wrap flex-column justify-content-between">
+                <div class="content__col">
     
                     
 <!-- Start .content__details -->
@@ -245,11 +253,56 @@
         Lorem Ipsum has been the industry's standard dummy text ever since. 
     </p>
 </div><!-- End /.content__details -->
+                 
+                    <!-- Start .Progressbar -->
+<section class="Progressbar">
 
-                    <div class="meter">
-                            <span style="width: 80%; height: 6px;" ></span>
-                        </div>                    
-                    
+    <!-- Start .Progressbar -->
+    <div class="Progressbar__item">
+        <div class="Progressbar__header d-flex justify-content-between">
+            <div class="Progressbar__title">Photoshop</div>
+            <div class="Progressbar__count" data-percentage="90"></div>            
+        </div>
+        <div class="Progressbar__full">
+            <span class="Progressbar__fill"></span>
+        </div>
+    </div><!-- End /.Progressbar__item -->
+
+    <!-- Start .Progressbar -->
+    <div class="Progressbar__item">
+        <div class="Progressbar__header d-flex justify-content-between">
+            <div class="Progressbar__title">Design</div>
+            <div class="Progressbar__count" data-percentage="70"></div>            
+        </div>
+        <div class="Progressbar__full">
+            <span class="Progressbar__fill"></span>
+        </div>
+    </div><!-- End /.Progressbar__item -->
+
+    <!-- Start .Progressbar -->
+    <div class="Progressbar__item">
+        <div class="Progressbar__header d-flex justify-content-between">
+            <div class="Progressbar__title">Coloring</div>
+            <div class="Progressbar__count" data-percentage="50"></div>            
+        </div>
+        <div class="Progressbar__full">
+            <span class="Progressbar__fill"></span>
+        </div>
+    </div><!-- End /.Progressbar__item -->
+
+    <!-- Start .Progressbar -->
+    <div class="Progressbar__item">
+        <div class="Progressbar__header d-flex justify-content-between">
+            <div class="Progressbar__title">Printing</div>
+            <div class="Progressbar__count" data-percentage="40"></div>            
+        </div>
+        <div class="Progressbar__full">
+            <span class="Progressbar__fill"></span>
+        </div>
+    </div><!-- End /.Progressbar__item -->
+
+</section>
+<!--// Progress Bar Area -->
     
                 </div><!-- End /.content__col --> 
                         
@@ -258,7 +311,8 @@
         </div><!-- End /.About-details -->
 
     </div>
-</section>
+</section><!-- End /.About -->
+
 </main>
 
 <!-- 7. Footer -->
@@ -327,32 +381,3 @@
 
     </body>
 </html>
-
-<script>
-    
-    var $meters = $(".meter > span");
-    var $section = $('#third');
-    var $queue = $({});
-    
-    function loadDaBars() {       
-        $meters.each(function() {
-            var $el = $(this);
-            var origWidth = $el.width();
-            var elementPos = $(this).offset().top;
-            var topOfWindow = $(window).scrollTop();
-            var animate = $(this).data('animate');
-				if (elementPos < topOfWindow + $(window).height() - 30 && !animate) {
-					$(this).data('animate', true);
-            $el.width(0);
-            $queue.queue(function(next) {
-                $el.animate({width: origWidth}, 1200, next);
-            }).stop();;
-                }
-        });
-    }
-
-		loadDaBars();
-		$(window).scroll(loadDaBars);
-
-   
-</script>

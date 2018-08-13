@@ -18,6 +18,8 @@
     |___Stage Padding Owl Carousel Slider
     |___Button Ripple Effect
     |___Sticky Header
+    |___Form Input Focus Materialize Effect
+    |___Animate Progressbar on Scroll
     |
 	[END INDEX ]
 
@@ -66,8 +68,6 @@
 			}
 		}
 	})	
-
-
 
 
 	/* Button Ripple Effect */
@@ -124,11 +124,58 @@
 			$field.removeClass('Form__group--focus');
 		}
 	});	
-	
+
+
+    /* Progressbar */
+    var $prg_fill = $('.Progressbar__count[data-percentage]');
+	var $queue = $({});
+	$prg_fill.each(function () {
+		var progress = $(this);
+		var percentage = Math.ceil($(this).attr('data-percentage'));		
+		$({countNum: 0}).animate({countNum: percentage}, {
+			duration: 2000,
+			easing:'linear',
+			step: function() {
+				// What todo on every count
+				var pct = '';
+				if(percentage == 0){
+					pct = Math.floor(this.countNum) + '%';
+				}else{
+					pct = Math.floor(this.countNum+1) + '%';
+				}
+				progress.text(pct) && progress.parent().siblings().children().css('width',pct);	
+			}
+		})
+	})
+
+
+
+	/* Portfolio Isotope Filter */  
+	$('.filter__content').isotope({
+		itemSelector: '.filter__grid',
+	});
+	// filter items on button click
+	$('.filter__group').on( 'click', '.filter__button', function() {
+		var filterValue = $(this).attr('data-filter');
+		$('.filter__content').isotope({ filter: filterValue });
+		$('.filter__button').removeClass('active');
+		$(this).addClass('active');
+	});
 	
 
+
+	/* Images Loaded - Isotope height calculation */  
+	// init Isotope
+	var $grid = $('.filter__content').isotope({
+		itemSelector: '.filter__grid',
+		percentPosition: true,
+	});
+	// layout Isotope after each image loads
+	$grid.imagesLoaded().progress( function() {
+	  $grid.isotope('layout');
+	});		
+
+	
 
 })(jQuery);
 
-	
-	

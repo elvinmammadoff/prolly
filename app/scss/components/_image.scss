@@ -41,7 +41,7 @@
             }
         }
         &__extra {
-            padding: 1.625rem 2.25em;
+            padding: 1.625rem 2.25rem;
             &:before, &:after {
                 position: absolute;
                 content: "";
@@ -62,6 +62,37 @@
                 &:before {
                     height: 0%;                    
                 }
+                &:after {
+                    width: 0%;                    
+                }
+            }
+        }
+        &--vertical {
+            &:before {
+                right: 35%;
+            }
+            &:after {
+                width: 65%;
+            }
+            &:hover {
+                &:after {
+                    right: 35%;              
+                }
+                .Blog {
+                    &-details {
+                        &__image {
+                            transform: translateX(-3.375rem);
+                        }
+                    }
+                }
+            }
+        }
+        &--vertical &__extra {
+            padding: 2.188rem 3.375rem;
+            &:after {
+                width: 65%;
+            }
+            &:hover {
                 &:after {
                     width: 0%;                    
                 }

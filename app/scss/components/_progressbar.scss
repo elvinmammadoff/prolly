@@ -1,0 +1,22 @@
+// Progressbar Styles
+.Progressbar {
+    margin-top: 6.25rem;
+    &__item {
+        margin-top: 1.563rem;
+    }
+    &__header {
+        color: $darkenBlue;
+        font-size: 1.063rem;
+    }
+    &__full { 
+        position: relative;
+        background: #d1d1d1;
+    }
+    &__fill {
+        display: block;
+        height: 0.188rem;
+        background-color: $secondary-color;
+        position: relative;
+        overflow: hidden;        
+    }
+}

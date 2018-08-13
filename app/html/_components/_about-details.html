@@ -1,3 +1,4 @@
+<!-- Start .About -->
 <section class="About">
     <div class="container">
 
@@ -10,21 +11,20 @@
 
                 <!-- Start .content__col -->
                 <div class="content__col">
-                    
-                    @@include('_image-line.html')
+
+                    @@include('_image-line.html', {
+                        "aboutDetails": true
+                    })
                     
                 </div>
                 <!-- End .content__col -->
     
                 <!-- Start .content__col -->
-                <div class="content__col d-flex flex-wrap flex-column justify-content-between">
+                <div class="content__col">
     
                     @@include('_content-details.html')
-
-                    <div class="meter">
-                            <span style="width: 80%; height: 6px;" ></span>
-                        </div>                    
-                    <!-- @@include('_progressbar.html') -->
+                 
+                    @@include('_progressbar.html')
     
                 </div><!-- End /.content__col --> 
                         
@@ -33,4 +33,4 @@
         </div><!-- End /.About-details -->
 
     </div>
-</section>
+</section><!-- End /.About -->
