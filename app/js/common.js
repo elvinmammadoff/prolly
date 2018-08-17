@@ -175,6 +175,44 @@
 	  $grid.isotope('layout');
 	});		
 
+
+
+
+	/* Touch Swipe Mobile Menu */ 
+    //open left menu clicking the left menu icon
+    $('.burger-icon--left').on('click', function(event){
+        event.preventDefault();
+        toggleLeftNav(true);
+        $("body").css({'overflow':'hidden'});
+    });
+    
+    //open right menu clicking the right menu icon
+    $('.burger-icon--right').on('click', function(event){
+        event.preventDefault();
+        toggleRightNav(true);
+        $("body").css({'overflow':'hidden'});
+    });
+    
+    $('.cd-close-nav, .cd-overlay').on('click', function(event){
+        event.preventDefault();
+        toggleLeftNav(false);
+        toggleRightNav(false);
+        $("body").css({'overflow':'auto'});
+    });
+    //select a new section
+    $('.cd-nav li').on('click', function(){
+
+    });
+
+    function toggleLeftNav(bool) {
+        $('.burger-menu--left, .cd-overlay').toggleClass('is-visible', bool);
+        $('main').toggleClass('scale-down', bool);
+    }
+
+    function toggleRightNav(bool) {
+        $('.burger-menu--right, .cd-overlay').toggleClass('is-visible', bool);
+        $('main').toggleClass('scale-down', bool);
+    }
 	
 
 })(jQuery);

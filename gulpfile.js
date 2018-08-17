@@ -51,6 +51,7 @@ gulp.task('js', function() {
 		'app/libs/owl.carousel/dist/owl.carousel.min.js',
 		'app/libs/isotope-layout/dist/isotope.pkgd.min.js',
 		'app/libs/imagesloaded/imagesloaded.pkgd.min.js',
+		'app/js/jquery.touchSwipe.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
