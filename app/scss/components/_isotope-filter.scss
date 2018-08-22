@@ -1,12 +1,7 @@
 // Portfolio Isotope Filter Styles
 .filter {
-    &__content {
-        width: 100%;
-        margin: 0 -1rem;
-    }
     &__grid {
-        width: calc(100%/3 - 2rem);
-        margin: 1rem;
+        margin: 1rem 0;
         a {
             width: 100%;
             display: block;
@@ -15,14 +10,15 @@
     &__group {
         text-align: center;
         padding: 0.5rem 0;
-        margin-bottom: 2.625em;
+        margin-bottom: 1.625em;
     }
     &__button {
         position: relative;
         padding: 0.625rem 0;
-        margin: 0 1rem;
+        margin: 0 1rem 1rem;
         font-size: 0.875rem;
         font-weight: 500;
+        display: inline-block;
         color: $secondary-color;
         cursor: pointer;
         text-transform: uppercase;

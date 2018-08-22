@@ -15,11 +15,9 @@
     }
     &-info {
         padding: 2.5rem 0;
-        &__wrap {
-            margin-top: 1.563rem;            
-        }
         &__item {
-            padding: 0 5.438rem;
+            margin-top: 1.563rem;   
+            @include FlexColumnAlignCenter;
             a.Contact {
                 &-info {
                     &__text {
@@ -37,6 +35,7 @@
             color: $secondary-color;
             position: relative;
             z-index: 1;
+            @include FlexCenter;
             @include transition03S;
             &:after {
                 content: "";
@@ -59,7 +58,14 @@
                 border-color: $secondary-color;
                 &:after {
                     animation: circleHoverEffect 1s ease-out 75ms;
-                }              
+                }   
+                & + .Contact {
+                    &-info {
+                        &__text {
+                            color: $secondary-color;
+                        }
+                    }
+                }           
             }
             .icon {
                 height: 4rem;
@@ -71,6 +77,7 @@
             color: $text2;
             font-weight: bold;
             margin-top: 1.875rem;
+            text-align: center;
         }
     }
 }

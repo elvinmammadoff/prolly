@@ -35,7 +35,7 @@
 		stagePadding: 100,
 		loop: true,
 		dots: true,
-		autoplay: true,
+		autoplay: false,
 		autoplaySpeed: 2000,	
 		autoplayTimeout: 4000,
 		autoplayHoverPause: true,

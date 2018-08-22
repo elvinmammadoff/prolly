@@ -3,8 +3,8 @@
 //== Nav menu item outline animation on hover ==//
 
 .Menu {
-
-  &-item {
+    @include FlexCenterBetween;
+    &-item {
     position: relative;
     border: 0.063rem solid transparent;
     color: $primary-color;
@@ -70,5 +70,5 @@
             bottom: 0;
         }
     }
-  }
+    }
 }

@@ -126,15 +126,22 @@
     <nav class="Header__nav">
 
         <!-- Start .container -->
-        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
 
             <!-- Start .Header__logo -->
-            <a href="/" title="Rafoz Farzo - Photography" class="Header__logo"></a>
+            <h1 class="Header__logo">
+                <a href="/" title="Rafoz Farzo - Photography Template">
+                    <img src="../img/Logo.png" alt="Rafoz Farzo - Photography Template" title="Rafoz Farzo - Photography Template" width="199" height="45" />
+                </a>
+            </h1>
             <!-- End /.Header__logo-->
 
             <!-- Start .burger-icon - Burger Right Menu Icon -->
             <a href="#cd-nav" class="cd-nav-trigger burger-icon burger-icon--right">
-                <span><i class="fa fa-bars" aria-hidden="true"></i></span>
+                <!-- <span><i class="fa fa-bars" aria-hidden="true"></i></span> -->
+                <div class="cd-nav__divider cd-nav__divider--top"></div>
+                <div class="cd-nav__divider cd-nav__divider--middke"></div>
+                <div class="cd-nav__divider cd-nav__divider--bottom"></div>
             </a>       
             <!-- End /.burger-icon - Burger Right Menu Icon -->     
 
@@ -142,7 +149,7 @@
             <div class="Menu">
 
                 <!-- Start .Menu-item -->
-                <a href="/" title="Home" class="Menu-item p-3 d-none d-md-inline-block">
+                <a href="/" title="Home" class="Menu-item p-3">
                     Home
                     <span class="line-1"></span>
                     <span class="line-2"></span>
@@ -151,7 +158,7 @@
                 </a><!-- End /.Menu-item-->   
 
                 <!-- Start .Menu-item -->
-                <a href="/about.html" title="About" class="Menu-item p-3 d-none d-md-inline-block">
+                <a href="/about.html" title="About" class="Menu-item p-3">
                     About
                     <span class="line-1"></span>
                     <span class="line-2"></span>
@@ -160,7 +167,7 @@
                 </a><!-- End /.Menu-item-->   
 
                 <!-- Start .Menu-item -->
-                <a href="/gallery.html" title="Gallery" class="Menu-item p-3 d-none d-md-inline-block">
+                <a href="/gallery.html" title="Gallery" class="Menu-item p-3">
                     Gallery
                     <span class="line-1"></span>
                     <span class="line-2"></span>
@@ -169,7 +176,7 @@
                 </a><!-- End /.Menu-item-->   
 
                 <!-- Start .Menu-item -->
-                <a href="/blog.html" title="Blog" class="Menu-item p-3 d-none d-md-inline-block">
+                <a href="/blog.html" title="Blog" class="Menu-item p-3">
                     Blog
                     <span class="line-1"></span>
                     <span class="line-2"></span>
@@ -178,7 +185,7 @@
                 </a><!-- End /.Menu-item-->   
 
                 <!-- Start .Menu-item -->
-                <a href="/contact.html" title="Contact" class="Menu-item p-3 d-none d-md-inline-block">
+                <a href="/contact.html" title="Contact" class="Menu-item p-3">
                     Contact
                     <span class="line-1"></span>
                     <span class="line-2"></span>
@@ -196,8 +203,9 @@
 
 
 <main>
-    <!-- 4. Cover -->
-    
+    <article>
+        <!-- 4. Cover -->
+        
 
 
 
@@ -210,14 +218,14 @@
     <section class="Cover Cover--blog d-flex align-items-center">
         <div class="container">
             <div class="Cover__content Cover__content--border">
-                <h1 class="Cover__title">Gallery</h1>
+                <h2 class="Cover__title">Gallery</h2>
             </div>
         </div>
     </section><!-- End /.Cover -->
 
-    
-    <!-- 5. Gallery -->
-    <!-- Start .Gallery -->
+        
+        <!-- 5. Gallery -->
+        <!-- Start .Gallery -->
 <section class="Gallery">
     <div class="container">
 
@@ -232,71 +240,77 @@
                 <span data-filter=".brand" class="filter__button">Brand Identity</span>
             </div>
 
-            <!-- Start .filter__content -->
-            <div class="filter__content">
+            <!-- Start .filter__content --> 
+            <div class="filter__content row">
 
-                <!-- Start .filter__grid -->
-                <div class="single-content webdesign webdev filter__grid">
+                <!-- Start .Gallery__item -->
+                <div class="Gallery__item single-content webdesign webdev filter__grid col-sm-12 col-md-4">
                     <a href="https://radiant-beyond-88759.herokuapp.com/" target="_blank">
-                        <img class="p2" alt="Clean Eats" src="../../img/gallery/Gallery1.jpg" />
+                        <figure class="effect effect-layla">
+                            <img class="p2" alt="Clean Eats" src="../../img/gallery/Gallery1.jpg" />
+                            <figcaption class="effect__caption">
+                                <h2>Crazy <span>Layla</span></h2>
+                                <!-- <a href="#">View more</a> -->
+                            </figcaption>			
+                        </figure>                        
                     </a>
-                </div><!-- End /.filter__grid -->
+                </div><!-- End /.Gallery__item -->
         
-                <!-- Start .filter__grid -->
-                <div class="single-content brand webdesign filter__grid">
+                <!-- Start .Gallery__item -->
+                <div class="Gallery__item single-content brand webdesign filter__grid col-sm-12 col-md-4">
                     <a href="https://aylinmarie.co/portfolio/oneyoungtraveler" target="_blank">
                         <img class="p2" alt="OneYoungTraveler" src="../../img/gallery/Gallery2.jpg" />
                     </a>
-                </div><!-- End /.filter__grid -->
+                </div><!-- End /.Gallery__item -->
         
-                <!-- Start .filter__grid -->
-                <div class="single-content brand filter__grid">
+                <!-- Start .Gallery__item -->
+                <div class="Gallery__item single-content brand filter__grid col-sm-12 col-md-4">
                     <a href="https://aylinmarie.co/atoh" target="_blank">
                         <img class="p2" alt="ATOH" src="../../img/gallery/Gallery3.jpg" />
                     </a>
-                </div><!-- End /.filter__grid -->
+                </div><!-- End /.Gallery__item -->
                     
-                <!-- Start .filter__grid -->
-                <div class="single-content webdesign filter__grid">
+                <!-- Start .Gallery__item -->
+                <div class="Gallery__item single-content webdesign filter__grid col-sm-12 col-md-4">
                     <a href="https://aylinmarie.co/chuck-marcus" target="_blank">
                         <img class="p2" alt="Chuck Marcus Photography" src="../../img/gallery/Gallery4.jpg" />
                     </a>
-                </div><!-- End /.filter__grid -->
+                </div><!-- End /.Gallery__item -->
                     
-                <!-- Start .filter__grid -->
-                <div class="single-content webdesign filter__grid">
+                <!-- Start .Gallery__item -->
+                <div class="Gallery__item single-content webdesign filter__grid col-sm-12 col-md-4">
                     <a href="https://aylinmarie.co/dope-wives" target="_blank">
                         <img class="p2" alt="Dope Wives" src="../../img/gallery/Gallery5.jpg" />
                     </a>
-                </div><!-- End /.filter__grid -->
+                </div><!-- End /.Gallery__item -->
                     
-                <!-- Start .filter__grid -->
-                <div class="single-content webdesign brand filter__grid">
+                <!-- Start .Gallery__item -->
+                <div class="Gallery__item single-content webdesign brand filter__grid col-sm-12 col-md-4">
                     <a href="https://aylinmarie.co/sofluencial" target="_blank">
                         <img class="p2" alt="Sofluencial" src="../../img/gallery/Gallery6.jpg" />
                     </a>
-                </div><!-- End /.filter__grid -->
+                </div><!-- End /.Gallery__item -->
                     
-                <!-- Start .filter__grid -->
-                <div class="single-content webdesign filter__grid">
+                <!-- Start .Gallery__item -->
+                <div class="Gallery__item single-content webdesign filter__grid col-sm-12 col-md-4">
                     <a href="https://aylinmarie.co/create-out-of-the-box" target="_blank">
                         <img class="p2" alt="Create Out of The Box" src="../../img/gallery/Gallery7.jpg" />
                     </a>
-                </div><!-- End /.filter__grid -->
+                </div><!-- End /.Gallery__item -->
                     
-                <!-- Start .filter__grid -->
-                <div class="single-content webdesign webdev filter__grid">
+                <!-- Start .Gallery__item -->
+                <div class="Gallery__item single-content webdesign webdev filter__grid col-sm-12 col-md-4">
                     <a href="https://mysterious-badlands-18420.herokuapp.com/" target="_blank">
                         <img class="p2" alt="Grade.ly" src="../../img/gallery/Gallery8.jpg" />
                     </a>
-                </div><!-- End /.filter__grid -->
+                </div><!-- End /.Gallery__item -->
                     
-                <!-- Start .filter__grid -->
-                <div class="single-content webdesign webdev filter__grid">
+                <!-- Start .Gallery__item -->
+                <div class="Gallery__item single-content webdesign webdev filter__grid col-sm-12 col-md-4">
                     <a href="https://safe-escarpment-90137.herokuapp.com/" target="_blank">
                         <img class="p2" alt="Vagabond" src="../../img/gallery/Gallery9.jpg" />
                     </a> 
-                </div><!-- End /.filter__grid -->
+                </div><!-- End /.Gallery__item -->
 
             </div><!-- End /.filter__content -->   
 
@@ -304,7 +318,7 @@
 
     </div>
 </section><!-- End /.Gallery -->          
-
+    </article>
 </main>
 
 <!-- 7. Footer -->
@@ -333,7 +347,7 @@
 <footer class="Footer">
 
     <!-- Start .container -->
-    <div class="container d-flex justify-content-between align-items-center">
+    <div class="container">
 
         <!-- Start .Footer__copyright -->
         <p class="Footer__copyright">© 2018 Envato. All rights reserved. Theme by Alissio</p>
@@ -385,7 +399,8 @@
 
 <!-- 8. Foot -->
 
-    <!-- Js Files -->        
+<!-- Js Files -->    
+    
     <script src="../../js/scripts.min.js"></script>
     <script src="../../js/jquery.touchSwipe.min.js"></script>
     <script src="../../js/common.js"></script>

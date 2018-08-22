@@ -1,4 +1,10 @@
 // Gallery Styles
 .Gallery {
     margin: 5rem 0;
+    &__item {
+        a {
+            color: #fff;  
+            font-size: 18px;          
+        }
+    }
 }

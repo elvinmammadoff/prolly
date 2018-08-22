@@ -7,10 +7,10 @@
 
 
             <!-- Start .content__row -->
-            <div class="content__row d-flex flex-wrap justify-content-between">
+            <div class="content__row row">
 
                 <!-- Start .content__col -->
-                <div class="content__col">
+                <div class="col-sm-12 col-md-6">
 
                     @@include('_image-line.html', {
                         "aboutDetails": true
@@ -20,11 +20,14 @@
                 <!-- End .content__col -->
     
                 <!-- Start .content__col -->
-                <div class="content__col">
-    
-                    @@include('_content-details.html')
-                 
-                    @@include('_progressbar.html')
+                <div class="col-sm-12 col-md-6 content__padd d-flex flex-wrap flex-column justify-content-between">
+                    <div class="content__margin">
+
+                        @@include('_content-details.html')
+                        
+                        @@include('_progressbar.html')
+
+                    </div>
     
                 </div><!-- End /.content__col --> 
                         

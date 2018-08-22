@@ -8,28 +8,26 @@
 @@include('_components/_header.html')
 
 <main> 
-
-    <!-- 4. Cover -->
-    @@include('_components/_cover.html', {
-        "contact": true
-    })
-
-    <!-- 5. Contact İnfo -->
-    @@include('_components/_contact-info.html')
-
-    <section class="Contact__methods">
-        <div class="container">
-
-            <!-- 6. Contact Form -->
-            @@include('_components/_contact-form.html')   
-
-        </div>
-
+    <article>
+        <!-- 4. Cover -->
+        @@include('_components/_cover.html', {
+            "contact": true
+        })
+    
+        <!-- 5. Contact İnfo -->
+        @@include('_components/_contact-info.html')
+    
+        <section class="Contact__methods">
+    
+            <div class="container">
+                <!-- 6. Contact Form -->
+                @@include('_components/_contact-form.html')   
+            </div>
+    
             <!-- 7. Contact Map -->
             @@include('_components/_contact-map.html')   
-            
-    </section>
-
+        </section>
+    </article>
 </main>
 
 <!-- 8. Footer -->

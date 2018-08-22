@@ -1,6 +1,8 @@
 // Blog Styles
 .Blog {
     &__wrap {
+        @include FlexJustifyBetween;
+        flex-wrap: wrap;
         margin: 0 -2.5rem;
     }
     &__item {
@@ -74,8 +76,10 @@
         &__footer {
             padding-top: 2em;
             border-top: 1px solid $secondary-color;
+            @include FlexJustifyBetween;
         }
         &-category {
+            @include FlexJustifyBetween;
             &__icon {
                 .icon {
                     width: 1em;

@@ -8,18 +8,20 @@
 @@include('_components/_header.html')
 
 <main>
-    <!-- 4. Cover -->
-    @@include('_components/_cover.html', {
-        "blog": true
-    })
-    
-    <!-- 5. Blog Post -->
-    @@include('_components/_blog-post.html', {
-        "blog": true
-    })
-    
-    <!-- 6. Pagination -->
-    @@include('_components/_pagination.html')
+    <article>
+        <!-- 4. Cover -->
+        @@include('_components/_cover.html', {
+            "blog": true
+        })
+        
+        <!-- 5. Blog Post -->
+        @@include('_components/_blog-post.html', {
+            "blog": true
+        })
+        
+        <!-- 6. Pagination -->
+        @@include('_components/_pagination.html')
+    </article>
 </main>
 
 <!-- 7. Footer -->

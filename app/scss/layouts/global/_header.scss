@@ -3,10 +3,7 @@
     // Logo Styles
     background-color: white;
     &__logo {
-        display: block;
-        background: url("../img/Logo.png") no-repeat;
-        width: 12.438rem;
-        height: 2.813rem;
+        margin-bottom: 0;
     }
     // Sticky Header Styles
     &.sticky-header {

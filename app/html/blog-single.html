@@ -8,16 +8,18 @@
 @@include('_components/_header.html')
 
 <main>
-    <!-- 4. Cover -->
-    @@include('_components/_cover.html', {
-        "blogSingle": true
-    })
+    <article>
+        <!-- 4. Cover -->
+        @@include('_components/_cover.html', {
+            "blogSingle": true
+        })
+        
+        <!-- 6. Blog Details -->
+        @@include('_components/_blog-details.html')
     
-    <!-- 6. Blog Details -->
-    @@include('_components/_blog-details.html')
-
-    <!-- 7. Blog Comment -->
-    @@include('_components/_blog-comment.html')
+        <!-- 7. Blog Comment -->
+        @@include('_components/_blog-comment.html')
+    </article>
 </main>
 
 <!-- 7. Footer -->

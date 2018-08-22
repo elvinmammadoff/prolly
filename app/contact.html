@@ -126,15 +126,22 @@
     <nav class="Header__nav">
 
         <!-- Start .container -->
-        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
 
             <!-- Start .Header__logo -->
-            <a href="/" title="Rafoz Farzo - Photography" class="Header__logo"></a>
+            <h1 class="Header__logo">
+                <a href="/" title="Rafoz Farzo - Photography Template">
+                    <img src="../img/Logo.png" alt="Rafoz Farzo - Photography Template" title="Rafoz Farzo - Photography Template" width="199" height="45" />
+                </a>
+            </h1>
             <!-- End /.Header__logo-->
 
             <!-- Start .burger-icon - Burger Right Menu Icon -->
             <a href="#cd-nav" class="cd-nav-trigger burger-icon burger-icon--right">
-                <span><i class="fa fa-bars" aria-hidden="true"></i></span>
+                <!-- <span><i class="fa fa-bars" aria-hidden="true"></i></span> -->
+                <div class="cd-nav__divider cd-nav__divider--top"></div>
+                <div class="cd-nav__divider cd-nav__divider--middke"></div>
+                <div class="cd-nav__divider cd-nav__divider--bottom"></div>
             </a>       
             <!-- End /.burger-icon - Burger Right Menu Icon -->     
 
@@ -142,7 +149,7 @@
             <div class="Menu">
 
                 <!-- Start .Menu-item -->
-                <a href="/" title="Home" class="Menu-item p-3 d-none d-md-inline-block">
+                <a href="/" title="Home" class="Menu-item p-3">
                     Home
                     <span class="line-1"></span>
                     <span class="line-2"></span>
@@ -151,7 +158,7 @@
                 </a><!-- End /.Menu-item-->   
 
                 <!-- Start .Menu-item -->
-                <a href="/about.html" title="About" class="Menu-item p-3 d-none d-md-inline-block">
+                <a href="/about.html" title="About" class="Menu-item p-3">
                     About
                     <span class="line-1"></span>
                     <span class="line-2"></span>
@@ -160,7 +167,7 @@
                 </a><!-- End /.Menu-item-->   
 
                 <!-- Start .Menu-item -->
-                <a href="/gallery.html" title="Gallery" class="Menu-item p-3 d-none d-md-inline-block">
+                <a href="/gallery.html" title="Gallery" class="Menu-item p-3">
                     Gallery
                     <span class="line-1"></span>
                     <span class="line-2"></span>
@@ -169,7 +176,7 @@
                 </a><!-- End /.Menu-item-->   
 
                 <!-- Start .Menu-item -->
-                <a href="/blog.html" title="Blog" class="Menu-item p-3 d-none d-md-inline-block">
+                <a href="/blog.html" title="Blog" class="Menu-item p-3">
                     Blog
                     <span class="line-1"></span>
                     <span class="line-2"></span>
@@ -178,7 +185,7 @@
                 </a><!-- End /.Menu-item-->   
 
                 <!-- Start .Menu-item -->
-                <a href="/contact.html" title="Contact" class="Menu-item p-3 d-none d-md-inline-block">
+                <a href="/contact.html" title="Contact" class="Menu-item p-3">
                     Contact
                     <span class="line-1"></span>
                     <span class="line-2"></span>
@@ -196,14 +203,14 @@
 
 
 <main> 
-
-    <!-- 4. Cover -->
-    
+    <article>
+        <!-- 4. Cover -->
+        
     <!-- Start .Cover -->
     <section class="Cover d-flex align-items-center">
         <div class="container">
             <div class="Cover__content Cover__content--border">
-                <h1 class="Cover__title">Contact</h1>
+                <h2 class="Cover__title">Contact</h2>
             </div>
         </div>
     </section><!-- End /.Cover -->
@@ -216,51 +223,56 @@
 
 
 
-
-    <!-- 5. Contact İnfo -->
-    <!-- Start .Contact-info -->
+    
+        <!-- 5. Contact İnfo -->
+        <!-- Start .Contact-info -->
 <section class="Contact-info">
     <div class="container">
 
         <h2 class="title text-center">Contact Us</h2>
 
         <!-- Start .Contact-info__wrap -->
-        <div class="Contact-info__wrap d-flex justify-content-center">
+        <div class="Contact-info__wrap row">
 
-            <!-- Start .Contact-info__item -->
-            <div class="Contact-info__item d-flex flex-column align-items-center">
-                <div class="Contact-info__icon rounded-circle d-flex align-items-center justify-content-center">
-                    <svg class="icon icon-mobile"><use xlink:href="#icon-mobile"></use></svg>
-                </div>
-                <a href="callto: +001 225 45 65" title="+001 225 45 65" class="Contact-info__text">+001 225 45 65</a>
-            </div><!-- End /.Contact-info__item -->      
-            
-            <!-- Start .Contact-info__item -->
-            <div class="Contact-info__item d-flex flex-column align-items-center">
-                <div class="Contact-info__icon rounded-circle d-flex align-items-center justify-content-center">
-                    <svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>
-                </div>
-                <a href="mailto:info@rafozfarzo.com" title="info@rafozfarzo.com" class="Contact-info__text">info@rafozfarzo.com</a>
-            </div><!-- End /.Contact-info__item -->  
-            
-            <!-- Start .Contact-info__item -->
-            <div class="Contact-info__item d-flex flex-column align-items-center">
-                <div class="Contact-info__icon rounded-circle d-flex align-items-center justify-content-center">
-                    <svg class="icon icon-map-o"><use xlink:href="#icon-map-o"></use></svg>
-                </div>
-                <span class="Contact-info__text">Colorado, Oba Street 120</span>
-            </div><!-- End /.Contact-info__item -->  
+            <div class="col-sm-12 col-md-4">
+                <!-- Start .Contact-info__item -->
+                <div class="Contact-info__item">
+                    <a href="callto: +001 225 45 65" title="+001 225 45 65" class="Contact-info__icon rounded-circle">
+                        <svg class="icon icon-mobile"><use xlink:href="#icon-mobile"></use></svg>
+                    </a>
+                    <a href="callto: +001 225 45 65" title="+001 225 45 65" class="Contact-info__text">+001 225 45 65</a>
+                </div><!-- End /.Contact-info__item -->  
+            </div>
+
+            <div class="col-sm-12 col-md-4">
+                <!-- Start .Contact-info__item -->
+                <div class="Contact-info__item">
+                    <a href="mailto:info@rafozfarzo.com" title="info@rafozfarzo.com" class="Contact-info__icon rounded-circle">
+                        <svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>
+                    </a>
+                    <a href="mailto:info@rafozfarzo.com" title="info@rafozfarzo.com" class="Contact-info__text">info@rafozfarzo.com</a>
+                </div><!-- End /.Contact-info__item -->  
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <!-- Start .Contact-info__item -->
+                <div class="Contact-info__item">
+                    <a href="#google-map" title="Colorado, Oba Street 120" class="Contact-info__icon Contact-info__map rounded-circle">
+                        <svg class="icon icon-map-o"><use xlink:href="#icon-map-o"></use></svg>
+                    </a>
+                    <span class="Contact-info__text">Colorado, Oba Street 120</span>
+                </div><!-- End /.Contact-info__item -->  
+            </div>    
 
         </div><!-- End /.Contact-info__wrap -->
 
     </div>
 </section><!-- End /.Contact-info -->
-
-    <section class="Contact__methods">
-        <div class="container">
-
-            <!-- 6. Contact Form -->
-            <!-- Start .Contact-form -->
+    
+        <section class="Contact__methods">
+    
+            <div class="container">
+                <!-- 6. Contact Form -->
+                <!-- Start .Contact-form -->
 <div class="Contact__form">
     
     <h3 class="title--mini text-center">Send Message</h3>
@@ -301,18 +313,16 @@
 
 </div><!-- End /.Contact-form -->
    
-
-        </div>
-
+            </div>
+    
             <!-- 7. Contact Map -->
             <!-- Start .Map -->
 <div class="Map">
     <div class="Map__container" id="google-map"></div>
 </div><!-- End /.Map -->
    
-            
-    </section>
-
+        </section>
+    </article>
 </main>
 
 <!-- 8. Footer -->
@@ -341,7 +351,7 @@
 <footer class="Footer">
 
     <!-- Start .container -->
-    <div class="container d-flex justify-content-between align-items-center">
+    <div class="container">
 
         <!-- Start .Footer__copyright -->
         <p class="Footer__copyright">© 2018 Envato. All rights reserved. Theme by Alissio</p>
@@ -392,6 +402,8 @@
 </footer><!-- End /.Footer -->
 
 <!-- 9. Foot -->
+
+<!-- Js Files -->    
 
 
 

@@ -10,12 +10,110 @@
 
 // ≥992px
 @include media-breakpoint-down(md) {
+    .Menu {
+        display: none;
+    }
+    .Blog {
+        &-details {
+            &__footer {
+                flex-direction: column;
+            }
+            &-category {
+                justify-content: flex-start;
+            }
+        }
+    }
+    .social {
+        margin-top: 0.625rem;
+        &__item {
+            margin-left: 0;
+            margin-right: 0.625rem;
+        }
+    }
+}
 
+@include MQ(tablet) { 
+    .Blog {
+        &__item {
+            .content {
+                &__text {
+                    display: none;
+                }
+                &__title {
+                    font-size: 1.6rem;
+                }
+            }            
+        }
+    }
 }
 
 // ≥768px
 @include media-breakpoint-down(sm) {
-
+    .Blog {
+        &-details {
+            &__footer {
+                margin-top: 1rem;
+            }
+        }
+        &__wrap {
+            margin: 0;
+        }
+        &__item {
+            width: 100%;
+            margin: 2.5rem 0 .9rem;
+        }
+    }
+    .content {
+        &__margin {
+            margin-top: 2.4rem;
+        }
+    }
+    .image {
+        &-line {
+            &__extra {
+                padding-right: 0!important;
+                img {
+                    width: 100%;
+                }
+            }        
+        }
+    }
+    .Footer {
+        .container {
+            flex-direction: column;
+        }
+    }
+    .Contact {
+        &__form {
+            position: relative;
+            top: 0;
+            transform: none;
+            width: 100%;
+        }
+    }
+    .filter {
+        &__group {
+            margin-bottom: 0;
+        }
+        &__button {
+            margin-right: 0;
+        }
+    }
+    .Contact {
+        &__methods {
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+        }
+        &__form {
+            box-shadow: none;
+            border-top: .063rem solid #ddd;
+        }
+    }
+    .Map {
+        margin-top: 0;
+    }
 }
 
 // ≥576px

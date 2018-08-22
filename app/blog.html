@@ -126,15 +126,22 @@
     <nav class="Header__nav">
 
         <!-- Start .container -->
-        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
 
             <!-- Start .Header__logo -->
-            <a href="/" title="Rafoz Farzo - Photography" class="Header__logo"></a>
+            <h1 class="Header__logo">
+                <a href="/" title="Rafoz Farzo - Photography Template">
+                    <img src="../img/Logo.png" alt="Rafoz Farzo - Photography Template" title="Rafoz Farzo - Photography Template" width="199" height="45" />
+                </a>
+            </h1>
             <!-- End /.Header__logo-->
 
             <!-- Start .burger-icon - Burger Right Menu Icon -->
             <a href="#cd-nav" class="cd-nav-trigger burger-icon burger-icon--right">
-                <span><i class="fa fa-bars" aria-hidden="true"></i></span>
+                <!-- <span><i class="fa fa-bars" aria-hidden="true"></i></span> -->
+                <div class="cd-nav__divider cd-nav__divider--top"></div>
+                <div class="cd-nav__divider cd-nav__divider--middke"></div>
+                <div class="cd-nav__divider cd-nav__divider--bottom"></div>
             </a>       
             <!-- End /.burger-icon - Burger Right Menu Icon -->     
 
@@ -142,7 +149,7 @@
             <div class="Menu">
 
                 <!-- Start .Menu-item -->
-                <a href="/" title="Home" class="Menu-item p-3 d-none d-md-inline-block">
+                <a href="/" title="Home" class="Menu-item p-3">
                     Home
                     <span class="line-1"></span>
                     <span class="line-2"></span>
@@ -151,7 +158,7 @@
                 </a><!-- End /.Menu-item-->   
 
                 <!-- Start .Menu-item -->
-                <a href="/about.html" title="About" class="Menu-item p-3 d-none d-md-inline-block">
+                <a href="/about.html" title="About" class="Menu-item p-3">
                     About
                     <span class="line-1"></span>
                     <span class="line-2"></span>
@@ -160,7 +167,7 @@
                 </a><!-- End /.Menu-item-->   
 
                 <!-- Start .Menu-item -->
-                <a href="/gallery.html" title="Gallery" class="Menu-item p-3 d-none d-md-inline-block">
+                <a href="/gallery.html" title="Gallery" class="Menu-item p-3">
                     Gallery
                     <span class="line-1"></span>
                     <span class="line-2"></span>
@@ -169,7 +176,7 @@
                 </a><!-- End /.Menu-item-->   
 
                 <!-- Start .Menu-item -->
-                <a href="/blog.html" title="Blog" class="Menu-item p-3 d-none d-md-inline-block">
+                <a href="/blog.html" title="Blog" class="Menu-item p-3">
                     Blog
                     <span class="line-1"></span>
                     <span class="line-2"></span>
@@ -178,7 +185,7 @@
                 </a><!-- End /.Menu-item-->   
 
                 <!-- Start .Menu-item -->
-                <a href="/contact.html" title="Contact" class="Menu-item p-3 d-none d-md-inline-block">
+                <a href="/contact.html" title="Contact" class="Menu-item p-3">
                     Contact
                     <span class="line-1"></span>
                     <span class="line-2"></span>
@@ -196,15 +203,16 @@
 
 
 <main>
-    <!-- 4. Cover -->
-    
+    <article>
+        <!-- 4. Cover -->
+        
 
 
     <!-- Start .Cover -->
     <section class="Cover Cover--blog d-flex align-items-center">
         <div class="container">
             <div class="Cover__content Cover__content--border">
-                <h1 class="Cover__title">Blog</h1>
+                <h2 class="Cover__title">Blog</h2>
             </div>
         </div>
     </section><!-- End /.Cover -->
@@ -215,14 +223,14 @@
 
 
 
-    
-    <!-- 5. Blog Post -->
-    <!-- Start .Blog -->
+        
+        <!-- 5. Blog Post -->
+        <!-- Start .Blog -->
 <section class="Blog">
     <div class="container">  
         
         <!-- Start .Blog__wrap -->
-        <div class="Blog__wrap d-flex flex-wrap justify-content-between">
+        <div class="Blog__wrap">
             
                 
                 <!-- Start .Blog__item -->
@@ -237,8 +245,7 @@
                     <!-- Start .Blog__body -->
                     <div class="Blog__body">
 
-                        
-<!-- Start .content__details -->
+                        <!-- Start .content__details -->
 <div class="content__details">
     <h3 class="content__title"><a href="/blog-single.html" title="Lorem Ipsum">Lorem Ipsum</a></h3>
     <div class="content__description">January 4, 2018 / Posted Rafig</div>
@@ -269,8 +276,7 @@
                     <!-- Start .Blog__body -->
                     <div class="Blog__body">
 
-                        
-<!-- Start .content__details -->
+                        <!-- Start .content__details -->
 <div class="content__details">
     <h3 class="content__title"><a href="/blog-single.html" title="Lorem Ipsum">Lorem Ipsum</a></h3>
     <div class="content__description">January 4, 2018 / Posted Rafig</div>
@@ -301,8 +307,7 @@
                     <!-- Start .Blog__body -->
                     <div class="Blog__body">
 
-                        
-<!-- Start .content__details -->
+                        <!-- Start .content__details -->
 <div class="content__details">
     <h3 class="content__title"><a href="/blog-single.html" title="Lorem Ipsum">Lorem Ipsum</a></h3>
     <div class="content__description">January 4, 2018 / Posted Rafig</div>
@@ -333,8 +338,7 @@
                     <!-- Start .Blog__body -->
                     <div class="Blog__body">
 
-                        
-<!-- Start .content__details -->
+                        <!-- Start .content__details -->
 <div class="content__details">
     <h3 class="content__title"><a href="/blog-single.html" title="Lorem Ipsum">Lorem Ipsum</a></h3>
     <div class="content__description">January 4, 2018 / Posted Rafig</div>
@@ -356,9 +360,9 @@
         
     </div>
 </section><!-- End /.Blog -->
-    
-    <!-- 6. Pagination -->
-    <!-- Start .Pagination -->
+        
+        <!-- 6. Pagination -->
+        <!-- Start .Pagination -->
 <section class="Pagination">
     <div class="container">
         <div class="d-flex justify-content-center">
@@ -370,6 +374,7 @@
         </div>
     </div>
 </section><!-- End /.Pagination-->
+    </article>
 </main>
 
 <!-- 7. Footer -->
@@ -398,7 +403,7 @@
 <footer class="Footer">
 
     <!-- Start .container -->
-    <div class="container d-flex justify-content-between align-items-center">
+    <div class="container">
 
         <!-- Start .Footer__copyright -->
         <p class="Footer__copyright">© 2018 Envato. All rights reserved. Theme by Alissio</p>
@@ -450,7 +455,8 @@
 
 <!-- 8. Foot -->
 
-    <!-- Js Files -->        
+<!-- Js Files -->    
+    
     <script src="../../js/scripts.min.js"></script>
     <script src="../../js/jquery.touchSwipe.min.js"></script>
     <script src="../../js/common.js"></script>
