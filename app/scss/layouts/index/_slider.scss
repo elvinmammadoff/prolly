@@ -16,7 +16,6 @@
         color: #fff;
         font-size: 1.25rem;
         backface-visibility: hidden;
-        @include FlexColumnCenter;
         &:after, &:before {
             pointer-events: none;                        
         }

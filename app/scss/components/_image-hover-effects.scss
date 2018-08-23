@@ -9,7 +9,8 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;          
+        height: 100%;  
+        @include FlexCenter;        
     }
     &__img {
         position: relative;
@@ -37,6 +38,7 @@
         } 
         &__caption {
             padding: 3rem;
+            flex-direction: column;
             &:before {
                 position: absolute;
                 top: 1rem;
@@ -50,89 +52,74 @@
             }
         }                 
     } 
+
+
+    //Prolly Layla 
+    &-layla {
+        background: $primary-color;
+        &__caption {
+            padding: 2rem;  
+            &:after, &:before {
+                position: absolute;
+                content: '';
+                opacity: 0;
+            }
+            &:before {
+                top: 40px;
+                right: 20px;
+                bottom: 40px;
+                left: 20px;
+                border-top: 1px solid #fff;
+                border-bottom: 1px solid #fff;
+                transform: scale(0,1);
+                -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+            }   
+            &:after {
+                top: 20px;
+                right: 40px;
+                bottom: 20px;
+                left: 40px;
+                border-right: 1px solid #fff;
+                border-left: 1px solid #fff;
+                transform: scale(1,0);
+                transform-origin: 100% 0;
+            }   
+            &:after, &:before {
+                transition: opacity 0.35s, transform 0.35s;                
+            }    
+        }
+        &__title {
+            margin: 0;
+            padding: 1rem;
+            opacity: 0;
+            transform: translate3d(0,-10px,0);    
+            transition: opacity 0.35s, transform 0.35s;        
+        }
+        &__img {
+            transition: opacity 0.35s, transform 0.35s;
+            transform: scale(1.15);            
+        }
+        &:hover {
+            .effect-layla {
+                &__caption:after, &__caption:before {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                &__title {
+                    opacity: 1;
+                    transform: translate3d(0,0,0);
+                }
+                &__caption:after, 
+                &__title,
+                &__img {
+                    transition-delay: 0.15s;
+                }  
+                &__img {
+                    opacity: 0.5;
+                    transform: scale(1);                     
+                }              
+            }
+        }
+    }
 }   
-
-
-
-
-/*---------------*/
-/***** Layla *****/
-/*---------------*/
-
-.effect-layla {
-	background: $primary-color;
-}
-
-.effect-layla figcaption {
-    padding: 2rem;
-    @include FlexCenter;
-}
-
-.effect-layla figcaption::before,
-.effect-layla figcaption::after {
-	position: absolute;
-	content: '';
-	opacity: 0;
-}
-
-.effect-layla figcaption::before {
-	top: 40px;
-	right: 20px;
-	bottom: 40px;
-	left: 20px;
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #fff;
-	transform: scale(0,1);
-	-webkit-transform-origin: 0 0;
-	transform-origin: 0 0;
-}
-
-.effect-layla figcaption::after {
-	top: 20px;
-	right: 40px;
-	bottom: 20px;
-	left: 40px;
-	border-right: 1px solid #fff;
-	border-left: 1px solid #fff;
-	transform: scale(1,0);
-	transform-origin: 100% 0;
-}
-
-.effect-layla h2 {
-	opacity: 0;
-	transform: translate3d(0,-10px,0);
-}
-
-.effect-layla figcaption::before,
-.effect-layla figcaption::after,
-.effect-layla h2 {
-	transition: opacity 0.35s, transform 0.35s;
-}
-
-.effect-layla img {
-    transition: opacity 0.35s, transform 0.35s;
-    transform: scale(1.15);    
-}
-
-.effect-layla:hover img {
-    opacity: 0.5;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-
-.effect-layla:hover figcaption::before,
-.effect-layla:hover figcaption::after {
-	opacity: 1;
-	transform: scale(1);
-}
-
-.effect-layla:hover h2 {
-	opacity: 1;
-	transform: translate3d(0,0,0);
-}
-
-.effect-layla:hover figcaption::after,
-.effect-layla:hover h2,
-.effect-layla:hover img {
-	transition-delay: 0.15s;
-}

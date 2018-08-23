@@ -29,6 +29,8 @@
     'use strict';
 
 
+
+
     /* Stage Padding Owl Carousel Slider */
 	$('.Slider .owl-carousel').owlCarousel({
 		items: 1,
@@ -70,6 +72,8 @@
 	})	
 
 
+
+
 	/* Button Ripple Effect */
 	$(".Slider__button").click(function (e) {
 		// Remove any old one
@@ -100,6 +104,8 @@
 	});
 
 
+
+
     /* Sticky Header */
     $(window).on('scroll', function () {
         var scrollPos = $(this).scrollTop();
@@ -111,6 +117,8 @@
 	});	
 	
 	
+
+
     /* Form Input Focus Materialize Effect */
 	$('.Form__input').focus(function () {
 		var $field = $(this).closest('.Form__group');
@@ -124,6 +132,8 @@
 			$field.removeClass('Form__group--focus');
 		}
 	});	
+
+
 
 
     /* Progressbar */
@@ -150,6 +160,7 @@
 
 
 
+
 	/* Portfolio Isotope Filter */  
 	$('.filter__content').isotope({
 		itemSelector: '.filter__grid',
@@ -161,6 +172,7 @@
 		$('.filter__button').removeClass('active');
 		$(this).addClass('active');
 	});
+
 	
 
 
@@ -179,14 +191,14 @@
 
 
 	/* Touch Swipe Mobile Menu */ 
-    //open left menu clicking the left menu icon
+    // open left menu clicking the left menu icon
     $('.burger-icon--left').on('click', function(event){
         event.preventDefault();
         toggleLeftNav(true);
         $("body").css({'overflow':'hidden'});
     });
     
-    //open right menu clicking the right menu icon
+    // open right menu clicking the right menu icon
     $('.burger-icon--right').on('click', function(event){
         event.preventDefault();
         toggleRightNav(true);
@@ -199,7 +211,7 @@
         toggleRightNav(false);
         $("body").css({'overflow':'auto'});
     });
-    //select a new section
+    // select a new section
     $('.cd-nav li').on('click', function(){
 
     });
@@ -212,7 +224,10 @@
     function toggleRightNav(bool) {
         $('.burger-menu--right, .cd-overlay').toggleClass('is-visible', bool);
         $('main').toggleClass('scale-down', bool);
-    }
+	}
+	
+
+
 	
 
 })(jQuery);
