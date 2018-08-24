@@ -136,7 +136,16 @@
 
 // ≤992px
 @include media-breakpoint-up(lg) {
-
+    .cd {
+        &-nav {
+            &-container, &-trigger {
+                display: none;
+            }
+        }
+        &-overlay {
+            display: none;
+        }
+    }
 }
 
 // ≤1200px

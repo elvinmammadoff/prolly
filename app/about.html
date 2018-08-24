@@ -15,6 +15,20 @@
 
         <!-- All styles for this template -->
         <link rel="stylesheet" href="css/main.min.css">
+        <link href="../../libs/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">  
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="256x256"  href="favicons/android-chrome-256x256.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-chrome-192x192.png">    
+        <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
+        <link rel="icon" type="image/png" href="favicons/favicon.ico" />
+        <link rel="manifest" href="favicons/site.webmanifest" />
+        <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#990100" />
+        <meta name="theme-color" content="#ffffff" />    
+        
 
     </head>
     <body class="d-flex flex-column justify-content-between">
@@ -137,12 +151,11 @@
             <!-- End /.Header__logo-->
 
             <!-- Start .burger-icon - Burger Right Menu Icon -->
-            <a href="#cd-nav" class="cd-nav-trigger burger-icon burger-icon--right">
-                <!-- <span><i class="fa fa-bars" aria-hidden="true"></i></span> -->
-                <div class="cd-nav__divider cd-nav__divider--top"></div>
-                <div class="cd-nav__divider cd-nav__divider--middke"></div>
-                <div class="cd-nav__divider cd-nav__divider--bottom"></div>
-            </a>       
+            <div class="cd-nav-trigger burger-icon burger-icon--right">
+                <div class="cd-nav__divider"></div>
+                <div class="cd-nav__divider"></div>
+                <div class="cd-nav__divider"></div>
+            </div>       
             <!-- End /.burger-icon - Burger Right Menu Icon -->     
 
             <!-- Start .Menu -->
@@ -338,22 +351,68 @@
 
 <nav class="cd-nav-container burger-menu burger-menu--right" id="cd-nav">
     <div class="burger-menu__open">
-        <a href="index.html" class="burger-menu__logo" title="">
-            <img src="src/assets/img/logo.png" alt="logo" />
+        <a href="index.html" class="burger-menu__logo" title="Rafoz Farzo - Photography Template">
+            <img src="../img/Logo.png" alt="Rafoz Farzo - Photography Template" title="Rafoz Farzo - Photography Template" width="199" height="45" />
         </a>
+
+        <div class="cd-nav-trigger cd-close-nav">
+            <div class="cd-nav__divider cd-nav__divider--top"></div>
+            <div class="cd-nav__divider cd-nav__divider--bottom"></div>
+        </div>         
     </div>
     <ul class="burger-menu__list">
-        <li><a class="page-scroll" href="#header">Home</a></li>
-        <li><a class="page-scroll" href="#about_us">About</a></li>
-        <li><a class="page-scroll" href="#menu">Menus</a></li>
-        <li><a class="page-scroll" href="#gallery">Gallery</a></li>
-        <li><a class="page-scroll" href="#reservation">Reservation</a></li>
-        <li><a class="page-scroll" href="#footer">Contact</a></li>
+        <li><a class="page-scroll" href="/" title="Home">Home</a></li>
+        <li><a class="page-scroll" href="/about.html" title="About">About</a></li>
+        <li><a class="page-scroll" href="/gallery.html" title="Gallery">Gallery</a></li>
+        <li><a class="page-scroll" href="/blog.html" title="Blog">Blog</a></li>
+        <li><a class="page-scroll" href="/contact.html" title="Contact">Contact</a></li>
     </ul>
+    <div class="burger-menu__bottom">
+        <p class="copyright">© 2018 Envato. All rights reserved. Theme by Alissio</p>
+
+        <!-- Start .social -->
+        <div class="social">
+
+                <!-- Start .social__item -->
+                <a href="#" title="Facebook" class="social__item">
+                    <svg class="icon icon-facebook-square">
+                        <use xlink:href="#icon-facebook-square"></use>
+                    </svg>
+                </a><!-- End /.social__item -->
+    
+                <!-- Start .social__item -->
+                <a href="#" title="Google-Plus" class="social__item">
+                    <svg class="icon icon-google-plus">
+                        <use xlink:href="#icon-google-plus"></use>
+                    </svg>
+                </a><!-- End /.social__item -->
+    
+                <!-- Start .social__item -->
+                <a href="#" title="Flickr" class="social__item">
+                    <svg class="icon icon-flickr">
+                        <use xlink:href="#icon-flickr"></use>
+                    </svg>
+                </a><!-- End /.social__item -->
+    
+                <!-- Start .social__item -->
+                <a href="#" title="Instagram" class="social__item">
+                    <svg class="icon icon-instagram">
+                        <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                </a><!-- End /.social__item -->
+    
+                <!-- Start .social__item -->
+                <a href="#" title="Pinterest" class="social__item">
+                    <svg class="icon icon-pinterest-square">
+                        <use xlink:href="#icon-pinterest-square"></use>
+                    </svg>
+                </a><!-- End /.social__item -->
+    
+            </div><!-- End /.social -->        
+    </div>
 </nav>
 
-<div class="cd-overlay"></div>
-<!-- /.cd-overlay --> 
+<div class="cd-overlay"></div><!-- /.cd-overlay --> 
 
 <!-- Start .Footer -->
 <footer class="Footer">
@@ -362,7 +421,7 @@
     <div class="container">
 
         <!-- Start .Footer__copyright -->
-        <p class="Footer__copyright">© 2018 Envato. All rights reserved. Theme by Alissio</p>
+        <p class="copyright copyright--white">© 2018 Envato. All rights reserved. Theme by Alissio</p>
         <!-- End /.container -->
 
         <!-- Start .social -->
@@ -414,7 +473,7 @@
 <!-- Js Files -->    
     
     <script src="../../js/scripts.min.js"></script>
-    <script src="../../js/jquery.touchSwipe.min.js"></script>
+    <script src="../../js/burger-menu.min.js"></script>
     <script src="../../js/common.js"></script>
 
 

@@ -15,6 +15,20 @@
 
         <!-- All styles for this template -->
         <link rel="stylesheet" href="css/main.min.css">
+        <link href="../../libs/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">  
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="256x256"  href="favicons/android-chrome-256x256.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-chrome-192x192.png">    
+        <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
+        <link rel="icon" type="image/png" href="favicons/favicon.ico" />
+        <link rel="manifest" href="favicons/site.webmanifest" />
+        <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#990100" />
+        <meta name="theme-color" content="#ffffff" />    
+        
 
     </head>
     <body class="d-flex flex-column justify-content-between">
@@ -137,12 +151,11 @@
             <!-- End /.Header__logo-->
 
             <!-- Start .burger-icon - Burger Right Menu Icon -->
-            <a href="#cd-nav" class="cd-nav-trigger burger-icon burger-icon--right">
-                <!-- <span><i class="fa fa-bars" aria-hidden="true"></i></span> -->
-                <div class="cd-nav__divider cd-nav__divider--top"></div>
-                <div class="cd-nav__divider cd-nav__divider--middke"></div>
-                <div class="cd-nav__divider cd-nav__divider--bottom"></div>
-            </a>       
+            <div class="cd-nav-trigger burger-icon burger-icon--right">
+                <div class="cd-nav__divider"></div>
+                <div class="cd-nav__divider"></div>
+                <div class="cd-nav__divider"></div>
+            </div>       
             <!-- End /.burger-icon - Burger Right Menu Icon -->     
 
             <!-- Start .Menu -->
@@ -225,7 +238,8 @@
 
         
         <!-- 5. Gallery -->
-        <!-- Start .Gallery -->
+        
+<!-- Start .Gallery -->
 <section class="Gallery">
     <div class="container">
 
@@ -243,13 +257,13 @@
             </div>
 
             <!-- Start .filter__content --> 
-            <div class="filter__content row">
+            <div class="filter__content row" id="lightgallery">
 
                 <!-- Start .Gallery__item -->
-                <div class="Gallery__item single-content portraits lovestory lifestyle filter__grid col-sm-12 col-md-4">
-                    <a href="#" target="_blank">
+                <div class="Gallery__item single-content portraits lovestory lifestyle filter__grid col-sm-12 col-md-4" data-src="../../img/gallery/Gallery1.jpg">
+                    <a href="">
                         <figure class="effect effect-layla">
-                            <img class="effect-layla__img" alt="Clean Eats" src="../../img/gallery/Gallery1.jpg" />
+                            <img class="effect-layla__img" alt="Street Photography" title="Street Photography" src="../../img/gallery/Gallery1.jpg" />
                             <figcaption class="effect__caption effect-layla__caption">
                                 <h2 class="effect-layla__title">Street Photography</h2>
                             </figcaption>			
@@ -258,10 +272,10 @@
                 </div><!-- End /.Gallery__item -->
         
                 <!-- Start .Gallery__item -->
-                <div class="Gallery__item single-content lovestory fashion filter__grid col-sm-12 col-md-4">
-                    <a href="#" target="_blank">
+                <div class="Gallery__item single-content lovestory fashion filter__grid col-sm-12 col-md-4" data-src="../../img/gallery/Gallery2.jpg">
+                    <a href="">
                         <figure class="effect effect-layla">
-                            <img class="effect-layla__img" alt="OneYoungTraveler" src="../../img/gallery/Gallery2.jpg" />                            
+                            <img class="effect-layla__img" alt="Beauty Female" title="Beauty Female" src="../../img/gallery/Gallery2.jpg" />                            
                             <figcaption class="effect__caption effect-layla__caption">
                                 <h2 class="effect-layla__title">Beauty Female</h2>
                             </figcaption>	                            
@@ -270,10 +284,10 @@
                 </div><!-- End /.Gallery__item -->
         
                 <!-- Start .Gallery__item -->
-                <div class="Gallery__item single-content portraits nature filter__grid col-sm-12 col-md-4">
-                    <a href="#" target="_blank">
+                <div class="Gallery__item single-content portraits nature filter__grid col-sm-12 col-md-4" data-src="../../img/gallery/Gallery3.jpg">
+                    <a href="">
                         <figure class="effect effect-layla">
-                            <img class="effect-layla__img" alt="ATOH" src="../../img/gallery/Gallery3.jpg" />                            
+                            <img class="effect-layla__img" alt="Pretty Nature" title="Pretty Nature" src="../../img/gallery/Gallery3.jpg" />                            
                             <figcaption class="effect__caption effect-layla__caption">
                                 <h2 class="effect-layla__title">Pretty Nature</h2>
                             </figcaption>	                            
@@ -282,10 +296,10 @@
                 </div><!-- End /.Gallery__item -->
                     
                 <!-- Start .Gallery__item -->
-                <div class="Gallery__item single-content fashion filter__grid col-sm-12 col-md-4">
-                    <a href="#" target="_blank">
+                <div class="Gallery__item single-content fashion filter__grid col-sm-12 col-md-4" data-src="../../img/gallery/Gallery4.jpg">
+                    <a href="">
                         <figure class="effect effect-layla">
-                            <img class="effect-layla__img" alt="Chuck Marcus Photography" src="../../img/gallery/Gallery4.jpg" />                            
+                            <img class="effect-layla__img" alt="Magic Shine" title="Magic Shine" src="../../img/gallery/Gallery4.jpg" />                            
                             <figcaption class="effect__caption effect-layla__caption">
                                 <h2 class="effect-layla__title">Magic Shine</h2>
                             </figcaption>	                            
@@ -294,10 +308,10 @@
                 </div><!-- End /.Gallery__item -->
                     
                 <!-- Start .Gallery__item -->
-                <div class="Gallery__item single-content nature portraits filter__grid col-sm-12 col-md-4">
-                    <a href="#" target="_blank">
+                <div class="Gallery__item single-content nature portraits filter__grid col-sm-12 col-md-4" data-src="../../img/gallery/Gallery5.jpg">
+                    <a href="">
                         <figure class="effect effect-layla">
-                            <img class="effect-layla__img" alt="Dope Wives" src="../../img/gallery/Gallery5.jpg" />                            
+                            <img class="effect-layla__img" alt="Lemon Poppy Seed Blondies" title="Lemon Poppy Seed Blondies" src="../../img/gallery/Gallery5.jpg" />                            
                             <figcaption class="effect__caption effect-layla__caption">
                                 <h2 class="effect-layla__title">Lemon Poppy Seed Blondies</h2>
                             </figcaption>	                            
@@ -306,10 +320,10 @@
                 </div><!-- End /.Gallery__item -->
                     
                 <!-- Start .Gallery__item -->
-                <div class="Gallery__item single-content fashion filter__grid col-sm-12 col-md-4">
-                    <a href="#" target="_blank">
+                <div class="Gallery__item single-content fashion filter__grid col-sm-12 col-md-4" data-src="../../img/gallery/Gallery6.jpg">
+                    <a href="">
                         <figure class="effect effect-layla">
-                            <img class="effect-layla__img" alt="Sofluencial" src="../../img/gallery/Gallery6.jpg" />                            
+                            <img class="effect-layla__img" alt="Fashion Girl" title-"Fashion Girl" src="../../img/gallery/Gallery6.jpg" />                            
                             <figcaption class="effect__caption effect-layla__caption">
                                 <h2 class="effect-layla__title">Fashion Girl</h2>
                             </figcaption>	                            
@@ -318,10 +332,10 @@
                 </div><!-- End /.Gallery__item -->
                     
                 <!-- Start .Gallery__item -->
-                <div class="Gallery__item single-content lifestyle filter__grid col-sm-12 col-md-4">
-                    <a href="#" target="_blank">
+                <div class="Gallery__item single-content lifestyle filter__grid col-sm-12 col-md-4" data-src="../../img/gallery/Gallery7.jpg">
+                    <a href="">
                         <figure class="effect effect-layla">
-                            <img class="effect-layla__img" alt="Create Out of The Box" src="../../img/gallery/Gallery7.jpg" />                            
+                            <img class="effect-layla__img" alt="Outdoor Basketball" title="Outdoor Basketball" src="../../img/gallery/Gallery7.jpg" />                            
                             <figcaption class="effect__caption effect-layla__caption">
                                 <h2 class="effect-layla__title">Outdoor Basketball</h2>
                             </figcaption>	                            
@@ -330,10 +344,10 @@
                 </div><!-- End /.Gallery__item -->
                     
                 <!-- Start .Gallery__item -->
-                <div class="Gallery__item single-content lifestyle nature filter__grid col-sm-12 col-md-4">
-                    <a href="#" target="_blank">
+                <div class="Gallery__item single-content lifestyle nature filter__grid col-sm-12 col-md-4" data-src="../../img/gallery/Gallery8.jpg">
+                    <a href="">
                         <figure class="effect effect-layla">
-                            <img class="effect-layla__img" alt="Grade.ly" src="../../img/gallery/Gallery8.jpg" />                            
+                            <img class="effect-layla__img" alt="Healthy Lifestyle" title="Healthy Lifestyle" src="../../img/gallery/Gallery8.jpg" />                            
                             <figcaption class="effect__caption effect-layla__caption">
                                 <h2 class="effect-layla__title">Healthy Lifestyle</h2>
                             </figcaption>	                            
@@ -342,10 +356,10 @@
                 </div><!-- End /.Gallery__item -->
                     
                 <!-- Start .Gallery__item -->
-                <div class="Gallery__item single-content lovestory filter__grid col-sm-12 col-md-4">
-                    <a href="#" target="_blank">
+                <div class="Gallery__item single-content lovestory filter__grid col-sm-12 col-md-4" data-src="../../img/gallery/Gallery9.jpg">
+                    <a href="">
                         <figure class="effect effect-layla">
-                            <img class="effect-layla__img" alt="Vagabond" src="../../img/gallery/Gallery9.jpg" />                            
+                            <img class="effect-layla__img" alt="Christmas Lights" title="Christmas Lights" src="../../img/gallery/Gallery9.jpg" />                            
                             <figcaption class="effect__caption effect-layla__caption">
                                 <h2 class="effect-layla__title">Christmas Lights</h2>
                             </figcaption>	                            
@@ -353,12 +367,12 @@
                     </a> 
                 </div><!-- End /.Gallery__item -->
 
-            </div><!-- End /.filter__content -->   
+            </div><!-- End /.filter__content --> 
 
         </div><!-- End /.filter --> 
-
+            
     </div>
-</section><!-- End /.Gallery -->          
+</section><!-- End /.Gallery -->    
     </article>
 </main>
 
@@ -367,22 +381,68 @@
 
 <nav class="cd-nav-container burger-menu burger-menu--right" id="cd-nav">
     <div class="burger-menu__open">
-        <a href="index.html" class="burger-menu__logo" title="">
-            <img src="src/assets/img/logo.png" alt="logo" />
+        <a href="index.html" class="burger-menu__logo" title="Rafoz Farzo - Photography Template">
+            <img src="../img/Logo.png" alt="Rafoz Farzo - Photography Template" title="Rafoz Farzo - Photography Template" width="199" height="45" />
         </a>
+
+        <div class="cd-nav-trigger cd-close-nav">
+            <div class="cd-nav__divider cd-nav__divider--top"></div>
+            <div class="cd-nav__divider cd-nav__divider--bottom"></div>
+        </div>         
     </div>
     <ul class="burger-menu__list">
-        <li><a class="page-scroll" href="#header">Home</a></li>
-        <li><a class="page-scroll" href="#about_us">About</a></li>
-        <li><a class="page-scroll" href="#menu">Menus</a></li>
-        <li><a class="page-scroll" href="#gallery">Gallery</a></li>
-        <li><a class="page-scroll" href="#reservation">Reservation</a></li>
-        <li><a class="page-scroll" href="#footer">Contact</a></li>
+        <li><a class="page-scroll" href="/" title="Home">Home</a></li>
+        <li><a class="page-scroll" href="/about.html" title="About">About</a></li>
+        <li><a class="page-scroll" href="/gallery.html" title="Gallery">Gallery</a></li>
+        <li><a class="page-scroll" href="/blog.html" title="Blog">Blog</a></li>
+        <li><a class="page-scroll" href="/contact.html" title="Contact">Contact</a></li>
     </ul>
+    <div class="burger-menu__bottom">
+        <p class="copyright">© 2018 Envato. All rights reserved. Theme by Alissio</p>
+
+        <!-- Start .social -->
+        <div class="social">
+
+                <!-- Start .social__item -->
+                <a href="#" title="Facebook" class="social__item">
+                    <svg class="icon icon-facebook-square">
+                        <use xlink:href="#icon-facebook-square"></use>
+                    </svg>
+                </a><!-- End /.social__item -->
+    
+                <!-- Start .social__item -->
+                <a href="#" title="Google-Plus" class="social__item">
+                    <svg class="icon icon-google-plus">
+                        <use xlink:href="#icon-google-plus"></use>
+                    </svg>
+                </a><!-- End /.social__item -->
+    
+                <!-- Start .social__item -->
+                <a href="#" title="Flickr" class="social__item">
+                    <svg class="icon icon-flickr">
+                        <use xlink:href="#icon-flickr"></use>
+                    </svg>
+                </a><!-- End /.social__item -->
+    
+                <!-- Start .social__item -->
+                <a href="#" title="Instagram" class="social__item">
+                    <svg class="icon icon-instagram">
+                        <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                </a><!-- End /.social__item -->
+    
+                <!-- Start .social__item -->
+                <a href="#" title="Pinterest" class="social__item">
+                    <svg class="icon icon-pinterest-square">
+                        <use xlink:href="#icon-pinterest-square"></use>
+                    </svg>
+                </a><!-- End /.social__item -->
+    
+            </div><!-- End /.social -->        
+    </div>
 </nav>
 
-<div class="cd-overlay"></div>
-<!-- /.cd-overlay --> 
+<div class="cd-overlay"></div><!-- /.cd-overlay --> 
 
 <!-- Start .Footer -->
 <footer class="Footer">
@@ -391,7 +451,7 @@
     <div class="container">
 
         <!-- Start .Footer__copyright -->
-        <p class="Footer__copyright">© 2018 Envato. All rights reserved. Theme by Alissio</p>
+        <p class="copyright copyright--white">© 2018 Envato. All rights reserved. Theme by Alissio</p>
         <!-- End /.container -->
 
         <!-- Start .social -->
@@ -443,7 +503,7 @@
 <!-- Js Files -->    
     
     <script src="../../js/scripts.min.js"></script>
-    <script src="../../js/jquery.touchSwipe.min.js"></script>
+    <script src="../../js/burger-menu.min.js"></script>
     <script src="../../js/common.js"></script>
 
 

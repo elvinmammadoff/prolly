@@ -13,7 +13,8 @@
         margin-bottom: 1.625rem;
     }
     &__content {
-        min-height: 16.688rem;
+        min-height: 16.688rem!important;
+        overflow: hidden;
     }
     &__button {
         position: relative;
