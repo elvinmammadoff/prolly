@@ -79,7 +79,7 @@ gulp.task('watch', ['styles', 'js', 'imagemin', 'fileinclude', 'browser-sync'], 
 
 // 4. Minify and copy new images to dist
 
-gulp.task('imagemin', ['clean'], function() {
+gulp.task('imagemin', function() {
 	return gulp.src('app/img/**/*')
 	.pipe(changed('dist/img'))
 	.pipe(imagemin())
