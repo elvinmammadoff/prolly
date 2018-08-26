@@ -70,9 +70,10 @@ gulp.task('js', function() {
 });
 
 
-gulp.task('watch', ['styles', 'js', 'fileinclude', 'browser-sync'], function() {
+gulp.task('watch', ['styles', 'js', 'imagemin', 'fileinclude', 'browser-sync'], function() {
 	gulp.watch('app/scss/**/*.scss', ['styles']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
+	gulp.watch('app/img/**/*', ['imagemin']);
 	gulp.watch('app/html/**/*.html', ['fileinclude', browserSync.reload])
 });
 
@@ -111,7 +112,10 @@ gulp.task('build', ['clean', 'styles', 'js'], function() {
         .pipe(gulp.dest('dist/css'));
 
     var buildFonts = gulp.src('app/fonts/**/*')
-        .pipe(gulp.dest('dist/fonts'));
+		.pipe(gulp.dest('dist/fonts'));
+		
+	var buildImages = gulp.src('app/img/**/*')
+		.pipe(gulp.dest('dist/img'));
 
     var buildJs = gulp.src('app/js/**/*')
         .pipe(gulp.dest('dist/js'));
