@@ -4,7 +4,7 @@
   "description": "OptimizedHTML 4 - Start HTML Template",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "web": "node index.js"
   },
   "author": "WebDesign Master",
   "license": "ISC",
