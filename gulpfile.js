@@ -11,6 +11,7 @@ var     gulp          = require('gulp'),
 		notify        = require("gulp-notify"),
 		rsync         = require('gulp-rsync'),
 		fileinclude   = require('gulp-file-include');
+		imagemin 	  = require('gulp-imagemin');
 
 gulp.task('browser-sync', function() {
 	browserSync({
@@ -24,7 +25,7 @@ gulp.task('browser-sync', function() {
 	})
 });
 
-// Gulp File Include
+// 1. Gulp File Include
  
 gulp.task('fileinclude', function() {
 gulp.src(['app/html/*.html'])
@@ -35,6 +36,9 @@ gulp.src(['app/html/*.html'])
 	.pipe(gulp.dest('app/'));
 });
 
+
+// 2. Minify and copy new styles to dist
+
 gulp.task('styles', function() {
 	return gulp.src('app/scss/**/*.scss')
 	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
@@ -44,6 +48,9 @@ gulp.task('styles', function() {
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.stream())
 });
+
+
+// 3. Minify and copy new js files to dist
 
 gulp.task('js', function() {
 	return gulp.src([
@@ -69,7 +76,28 @@ gulp.task('watch', ['styles', 'js', 'fileinclude', 'browser-sync'], function() {
 	gulp.watch('app/html/**/*.html', ['fileinclude', browserSync.reload])
 });
 
-// 4. Dist directory clean
+// 4. Minify and copy new images to dist
+
+gulp.task('imagemin', ['clean'], function() {
+	return gulp.src('app/img/**/*')
+		.pipe(changed('dist/img'))
+		.pipe(imagemin())
+		.pipe(gulp.dest('dist/img'))
+})
+
+.pipe(imagemin([
+    imagemin.gifsicle({interlaced: true}),
+    imagemin.jpegtran({progressive: true}),
+    imagemin.optipng({optimizationLevel: 5}),
+    imagemin.svgo({
+        plugins: [
+            {removeViewBox: true},
+            {cleanupIDs: false}
+        ]
+    })
+]))
+
+// 5. Dist directory clean
 gulp.task('clean', function() {
     return del.sync('dist');
 });
