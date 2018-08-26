@@ -4,7 +4,7 @@
   "description": "OptimizedHTML 4 - Start HTML Template",
   "main": "index.js",
   "scripts": {
-    "web": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "WebDesign Master",
   "license": "ISC",
