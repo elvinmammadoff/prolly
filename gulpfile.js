@@ -80,22 +80,21 @@ gulp.task('watch', ['styles', 'js', 'fileinclude', 'browser-sync'], function() {
 
 gulp.task('imagemin', ['clean'], function() {
 	return gulp.src('app/img/**/*')
-		.pipe(changed('dist/img'))
-		.pipe(imagemin())
-		.pipe(gulp.dest('dist/img'))
+	.pipe(changed('dist/img'))
+	.pipe(imagemin())
+	.pipe(gulp.dest('dist/img'))
+	.pipe(imagemin([
+		imagemin.gifsicle({interlaced: true}),
+		imagemin.jpegtran({progressive: true}),
+		imagemin.optipng({optimizationLevel: 5}),
+		imagemin.svgo({
+			plugins: [
+				{removeViewBox: true},
+				{cleanupIDs: false}
+			]
+		})
+	]))
 })
-
-.pipe(imagemin([
-    imagemin.gifsicle({interlaced: true}),
-    imagemin.jpegtran({progressive: true}),
-    imagemin.optipng({optimizationLevel: 5}),
-    imagemin.svgo({
-        plugins: [
-            {removeViewBox: true},
-            {cleanupIDs: false}
-        ]
-    })
-]))
 
 // 5. Dist directory clean
 gulp.task('clean', function() {
