@@ -11,7 +11,12 @@ var     gulp          = require('gulp'),
 		notify        = require("gulp-notify"),
 		rsync         = require('gulp-rsync'),
 		fileinclude   = require('gulp-file-include');
+		cache 		  = require('gulp-cache');
 		imagemin 	  = require('gulp-imagemin');
+		imageminPngquant = require('imagemin-pngquant');
+		imageminZopfli 	 = require('imagemin-zopfli');
+		imageminMozjpeg  = require('imagemin-mozjpeg');
+		imageminGiflossy = require('imagemin-giflossy');		
 
 gulp.task('browser-sync', function() {
 	browserSync({
@@ -70,32 +75,69 @@ gulp.task('js', function() {
 });
 
 
-gulp.task('watch', ['styles', 'js', 'imagemin', 'fileinclude', 'browser-sync'], function() {
+gulp.task('watch', ['styles', 'js', 'image', 'fileinclude', 'browser-sync'], function() {
 	gulp.watch('app/scss/**/*.scss', ['styles']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
-	gulp.watch('app/img/**/*', ['imagemin']);
+	gulp.watch('app/img/**/*', ['image']);
 	gulp.watch('app/html/**/*.html', ['fileinclude', browserSync.reload])
 });
 
 // 4. Minify and copy new images to dist
 
-gulp.task('imagemin', function() {
-	return gulp.src('app/img/**/*')
-	.pipe(changed('dist/img'))
+gulp.task('image', function() {
+	return gulp.src(['app/img/**/*.{gif,png,jpg}'])
 	.pipe(imagemin())
 	.pipe(gulp.dest('dist/img'))
 	.pipe(imagemin([
-		imagemin.gifsicle({interlaced: true}),
-		imagemin.jpegtran({progressive: true}),
-		imagemin.optipng({optimizationLevel: 5}),
+
+		// jpg lossless
+		imagemin.jpegtran({
+			progressive: true
+		}),
+
+		//jpg very light lossy, use vs jpegtran
+		imageminMozjpeg({
+			quality: 90
+		}),
+
+		// svg
 		imagemin.svgo({
 			plugins: [
-				{removeViewBox: true},
+				{removeViewBox: false},
 				{cleanupIDs: false}
 			]
-		})
+		}),
+
+		// png
+		imagemin.optipng({
+			optimizationLevel: 5
+		}),
+		imageminPngquant({
+			speed: 1,
+			quality: 98 //lossy settings
+		}),		
+		imageminZopfli({
+			more: true
+			// iterations: 50 // very slow but more effective
+		}),	
+
+		// gif
+		imagemin.gifsicle({
+			interlaced: true
+		}),
+		// imagemin.gifsicle({
+		//     interlaced: true,
+		//     optimizationLevel: 3
+		// }),
+
+		//gif very light lossy, use only one of gifsicle or Giflossy
+		imageminGiflossy({
+			optimizationLevel: 3,
+			optimize: 3, //keep-empty: Preserve empty transparent frames
+			lossy: 2
+		}),		
 	]))
-})
+});
 
 // 5. Dist directory clean
 gulp.task('clean', function() {
@@ -104,14 +146,14 @@ gulp.task('clean', function() {
 
 
 // 6. Build project Dist directory
-gulp.task('build', ['clean', 'styles', 'js'], function() {
+gulp.task('build', ['clean', 'styles', 'image', 'js'], function() {
 
     var buildCss = gulp.src([
         'app/css/main.min.css'
     ])
         .pipe(gulp.dest('dist/css'));
 
-    var buildFonts = gulp.src('app/fonts/**/*')
+	var buildFonts = gulp.src('app/fonts/**/*')
 		.pipe(gulp.dest('dist/fonts'));
 		
 	var buildImages = gulp.src('app/img/**/*')

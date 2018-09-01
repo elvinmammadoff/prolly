@@ -13,10 +13,10 @@
         border-color: $secondary-color;
         &:hover {
             background-color: $button-secondary-bg;
-            border: 1px solid $button-secondary-border;
+            border: 0.063rem solid $button-secondary-border;
         }
     }
     &--default {
-        padding: 0.325em 1.367em;
+        padding: 0.325rem 1.367rem;
     }
 }

@@ -22,7 +22,7 @@
             padding: 1rem 0;
             z-index: 3;
             @include stickyHeader;
-            box-shadow: 0px 0.313rem 0.563rem 0.063rem rgba(144, 161, 180, 0.2);
+            box-shadow: 0 0.313rem 0.563rem 0.063rem rgba(144, 161, 180, 0.2);
             background-color: white;
         }
     }

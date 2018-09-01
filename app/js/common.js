@@ -236,9 +236,20 @@
 
 
 
-
-
+	/* Light Gallery Popup Images */ 
 	$('#lightgallery').lightGallery();
+
+
+
+	
+    /* ==========================
+       PRE-LOADER
+    =============================*/
+
+    // will fade loading animation
+    $("#object").delay(600).fadeOut(300);
+    // will fade loading background                 
+    $("#loading").delay(1000).fadeOut(500);	
 
 
 

@@ -74,22 +74,22 @@
             @include transition03S;
         }
         &__footer {
-            padding-top: 2em;
-            border-top: 1px solid $secondary-color;
+            padding-top: 2rem;
+            border-top: 0.063rem solid $secondary-color;
             @include FlexJustifyBetween;
         }
         &-category {
             @include FlexJustifyBetween;
             &__icon {
                 .icon {
-                    width: 1em;
-                    height: 1em;
+                    width: 1rem;
+                    height: 1rem;
                     color: $text2;
                 }
             }
         }
         &__tag {
-            margin-left: 1.125em;
+            margin-left: 1.125rem;
             a {
                 color: $text2;    
                 &:hover {
@@ -99,10 +99,10 @@
         }
     }
     &__comment {
-        padding-top: 2.5em;     
-        margin-bottom: 5em;   
+        padding-top: 2.5rem;     
+        margin-bottom: 5rem;   
         .Form__input--textarea {
-            height: 8.3em;
+            height: 8.3rem;
         }
     }
 }

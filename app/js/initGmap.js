@@ -190,7 +190,7 @@
            position: new google.maps.LatLng(40.740610, -73.935242),
            map: map,
            title: 'Rafoz - Farzo Photography',
-           icon: "../../img/icons/flag-map-marker.svg",
+           icon: "img/icons/flag-map-marker.svg",
            animation: google.maps.Animation.BOUNCE
        });
    }

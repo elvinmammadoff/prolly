@@ -6,7 +6,7 @@
         padding: 0.438rem;
         position: relative;
         padding: 0;
-        margin-bottom: 1.625em;
+        margin-bottom: 1.625rem;
         &--focus {
             .Form {
                 &__label {
@@ -54,7 +54,7 @@
         width: 100%;
         color: $text2;
         margin-top: 0.625rem;
-        padding: 0 0.938rem;
+        padding: 0 0.8rem;
         z-index: 1;
         @include transition;
     }
