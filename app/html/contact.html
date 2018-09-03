@@ -1,39 +1,38 @@
-<!-- 1. Head -->
 @@include('_components/_head.html')
 
-<!-- 2. Icons -->
 @@include('_components/_icons.html')
 
-<!-- 3. Header -->
 @@include('_components/_header.html')
 
 <main> 
     <article>
-        <!-- 4. Cover -->
+        
         @@include('_components/_cover.html', {
             "contact": true
         })
     
-        <!-- 5. Contact İnfo -->
         @@include('_components/_contact-info.html')
     
+        <!-- =========================
+            4. Section - Contact Methods 
+        ============================== -->  
+        
+        <!-- Start .Contact__methods -->
         <section class="Contact__methods">
-    
             <div class="container">
-                <!-- 6. Contact Form -->
+                
                 @@include('_components/_contact-form.html')   
+
             </div>
     
-            <!-- 7. Contact Map -->
             @@include('_components/_contact-map.html')   
-        </section>
+        </section><!-- End /.Contact__methods -->
+
     </article>
 </main>
 
-<!-- 8. Footer -->
 @@include('_components/_footer.html')
 
-<!-- 9. Foot -->
 @@include('_components/_foot.html', {
     "contact": true
 })

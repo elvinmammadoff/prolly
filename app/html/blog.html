@@ -1,31 +1,25 @@
-<!-- 1. Head -->
 @@include('_components/_head.html')
 
-<!-- 2. Icons -->
 @@include('_components/_icons.html')
 
-<!-- 3. Header -->
 @@include('_components/_header.html')
 
 <main>
     <article>
-        <!-- 4. Cover -->
+        
         @@include('_components/_cover.html', {
             "blog": true
         })
         
-        <!-- 5. Blog Post -->
         @@include('_components/_blog-post.html', {
             "blog": true
         })
         
-        <!-- 6. Pagination -->
         @@include('_components/_pagination.html')
+        
     </article>
 </main>
 
-<!-- 7. Footer -->
 @@include('_components/_footer.html')
 
-<!-- 8. Foot -->
 @@include('_components/_foot.html')

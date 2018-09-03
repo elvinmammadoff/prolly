@@ -76,15 +76,16 @@
     &-dots {
         position: absolute;
         bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
+        right: 0;
+        padding: 0 1.25rem;
         margin: 0 0 2.5rem;
     }
     &-dot {
         span {
             width: 1rem!important;
             height: 1rem!important;
-            margin: 0 0.5rem!important;
+            margin: .5rem!important;
             background-color: white!important;
             opacity: 1!important;
         } 
