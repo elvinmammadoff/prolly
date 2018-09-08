@@ -4,21 +4,20 @@
 
 .Menu {
     @include FlexCenterBetween;
+    padding: 0;
+    margin: 0;
     &-item {
-    position: relative;
-    border: 0.063rem solid transparent;
-    color: $primary-color;
-    text-decoration: none;
-    font-family: $default-font;
-    font-weight: bold;
-    text-transform: uppercase;
-    @include transition03S;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      position: relative;
+      border: 0.063rem solid transparent;
+      @include transition03S;
 
 
     //== Menu item outline animation on hover ==//    
 
     &:hover {
-        color: $secondary-color;
         .line {
             &-1 {
                 animation: move1 1500ms infinite ease;
@@ -36,6 +35,18 @@
                 animation: move4 1500ms infinite ease;
             }
         }
+    }
+
+    &__link {
+      display: flex;
+      color: $primary-color;
+      text-decoration: none;
+      font-family: $default-font;
+      font-weight: bold;
+      text-transform: uppercase;
+      &:hover {
+        color: $secondary-color;        
+      }
     }
 
     .line {
@@ -70,5 +81,77 @@
             bottom: 0;
         }
     }
+    }
+}
+
+.dropdown {
+    position: relative;
+    &:hover, &:focus, &:focus-within {
+        .dropdown-menu {
+            height: auto;
+            visibility: visible; 
+            opacity: 1;
+            z-index: 1;
+            transform: translateY(0);
+            transition-delay: 0s, 0s, 0.3s;    
+            color: $primary-color;  
+        }   
+    }
+    &-menu {
+        position: absolute;
+        list-style: none;
+        min-width: 160px;
+        background-color: $color-3;
+        box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+        visibility: hidden; 
+        opacity: 0;
+        top: 100%;
+        left: 0;
+        transform: translateY(-0.5rem);
+        z-index: -1;
+        transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+        padding: 0;
+        &__link {
+            padding: 6px 10px;
+            display: block;
+            color: $secondary-color;
+            border: 1px solid currentColor;
+            margin-top: -1px;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        &.show {
+            position: relative!important;
+            transform: none!important;
+            opacity: 1;
+            visibility: visible;
+            display: block;
+            .dropdown {
+                &-item {
+                    font-size: 13px;
+                }                
+            }
+        }
+    }  
+    &-toggle {
+        &:after {
+            content: none;
+        }
+        .icon {
+            transition: transform .2s;
+            transform: rotate(-90deg);             
+        }
+    }
+    &.show {
+        .dropdown {
+            &__link {
+                background-color: $secondary-color;
+                color: #fff;
+            }
+        }    
+        .icon {
+            transform: rotate(0);             
+        }    
     }
 }
