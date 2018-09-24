@@ -1,0 +1,100 @@
+// Testimonial Styles
+.testimonial {
+    position: relative;
+    z-index: 1;
+    &-slider {
+        &__review {
+            padding: 26px 37px 40px 30px;
+            background-color: #fff;
+            border: 1px solid rgba($primary-shadow, .02);
+            box-shadow: 0 1px 4px 0 rgba($primary-shadow, .04), 0 1px 0 0 rgba($primary-shadow, .02);
+            border-radius: 6px;    
+            position: relative;        
+        }
+        &__caret {
+            position: absolute;
+            bottom: 0;
+            box-sizing: border-box;
+            background: #fff;
+            &:after,
+            &:before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                left: -10px;
+                box-sizing: border-box;
+                border: 10px solid black;
+                border-color: transparent transparent #fff #fff;
+                transform-origin: 0 0;
+                transform: rotate(-45deg);
+              } 
+              &:after {
+                box-shadow: 0 1px 8px 0 rgba(32,27,23,.1);
+                z-index: -1;
+                } 
+          }       
+        &__text {
+            overflow: hidden;
+            font-size: 18px;
+            color: rgba($primary-color, .7);
+            line-height: 30px;  
+            margin-bottom: 0;    
+            height: 150px;
+            max-height: 150px;
+        }
+        &__quote {
+            position: relative;
+            padding-right: 63px;              
+        }
+        &__icon {
+            position: absolute;
+            top: 0;
+            right: 0;      
+            margin-top: 10px;   
+        }
+        &__details {
+            @include FlexCenterBetween;
+            margin-top: 40px;
+        }
+        &__user {
+            @include FlexAlignCenter;
+        }
+        &-avatar {
+            width: 70px;
+            min-width: 70px;
+            height: 70px;
+            @include borderRadius50;
+            overflow: hidden;
+            position: relative;
+            @include FlexCenter;
+            &:after {
+                content: "";
+                width: 70px;
+                min-width: 70px;
+                height: 70px;
+                @include borderRadius50;
+                background-color: transparent;
+                border: 2px solid $secondary-color;
+                display: inline-block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+            &__image {
+                width: 59px;
+                min-width: 59px;
+                height: 59px;
+                @include borderRadius50;
+                object-fit: cover;
+            }
+        }
+        &__name {
+            color: $primary-color;
+            margin-bottom: 0;
+            line-height: 18px;
+            font-size: 18px;
+            margin-left: 20px;
+        }
+    }    
+}

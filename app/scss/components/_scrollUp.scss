@@ -1,0 +1,32 @@
+// ScrollUp Styles
+.scroll-up {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    z-index: 5;
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    object-fit: cover;
+    background-color: $secondary-color;
+    @include borderRadius50;
+    @include FlexCenter;
+    @include transition03S;
+    &:hover {
+        background-color: $secondary-hover;        
+    }
+    &.show {
+        visibility: visible;
+        opacity: 1        
+    }
+    &__icon {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+        object-fit: cover;
+        background: url(../img/icons/angle-up.svg) no-repeat center center;
+    }
+}

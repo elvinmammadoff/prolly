@@ -1,39 +1,4 @@
-
 // Content Styles
-.content {
-    &__row {
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-    }
-    &__col {
-        margin: 0 2.5rem;
-        width: calc(100%/2 - 5rem);
-    }
-    &__padd {
-        padding-bottom: 1.4rem;
-    }
-    &__margin {
-        margin-top: 0.8rem;
-    }
-    &__title {
-        font-size: 2.125rem;
-        text-transform: uppercase;
-        color: $primary-color;
-        margin-bottom: 0;
-        > a {
-            color: currentColor;
-        }
-    }
-    &__description {
-        font-size: 0.875rem;
-        font-weight: 500;
-        color: $secondary-color;
-    }
-    &__text {
-        font-size: 0.938rem;
-        line-height: 1.5rem;
-        color: $text2;
-        margin-top: 2.188rem;
-        margin-bottom: 0;
-    }
+.Content {
+    margin-top: 60px;
 }

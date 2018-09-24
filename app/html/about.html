@@ -4,14 +4,14 @@
 
 @@include('_components/_header.html')
 
-<main>
+<main class="sticky">
     <article>
-
-        @@include('_components/_cover.html', {
-            "about": true
-        })
         
-        @@include('_components/_about-details.html')
+        @@include('_components/_cover-parallax.html', {
+            "about": true
+        })        
+    
+        @@include('_components/_about-info.html')
         
     </article>
 </main>

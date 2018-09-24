@@ -1,29 +1,50 @@
-// Header Styles
-.Header {
+// Navbar Styles
+.Navbar {
     // Logo Styles
-    background-color: white;
-    &__logo {
-        margin-bottom: 0;
+    background-color: #fff;
+    border: 1px solid rgba($secondary-shadow, .02);
+    height: 74px; 
+    &-logo {
+        @include FlexAlignCenter;
+        &__image {
+            margin-bottom: 0;
+            height: 45px;
+        }
+        &__link {
+            background: url(../img/Logo.png) center left no-repeat;
+            width: 181px;
+            height: 42px;
+            background-size: contain; 
+            display: inline-block;
+        }
+        &__online {
+            @include FlexAlignCenter;
+            .semibold {
+                margin-right: 6px;
+            }
+        }
     }
-    // Sticky Header Styles
+    // Sticky Navbar Styles
     &.sticky-header {
         position: absolute;
-        background: #fff;
         width: 100%;
         top: 0;
         left: 0;
-        z-index: 2;        
-        padding: 3rem 0;        
+        z-index: 2;              
         &.is-sticky {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            padding: 1rem 0;
             z-index: 3;
             @include stickyHeader;
             box-shadow: 0 0.313rem 0.563rem 0.063rem rgba(144, 161, 180, 0.2);
             background-color: white;
         }
     }
+}
+
+header {
+    border: 1px solid rgba($shadow-dark, .02);
+    box-shadow: 0 12px 14px 0 rgba(0,0,0,0.10), 0 1px 4px 0 rgba($shadow-dark, .04), 0 1px 0 0 rgba($shadow-dark, .02);    
 }

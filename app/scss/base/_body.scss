@@ -7,5 +7,6 @@ body {
 
     font-family: $default-font;
     min-height: 100vh;
-    background-color: white;
+    color: $primary-color;
+    background-color: $gray-body;
 }

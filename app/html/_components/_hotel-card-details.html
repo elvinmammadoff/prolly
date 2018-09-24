@@ -1,0 +1,47 @@
+<!-- Start .Banner-card -->
+<div class="Banner-card Banner-card--details">
+    
+    <div class="card--padd">
+
+        <!-- Start .Banner-card__header -->
+        <div class="Banner-card__header">
+            <img src="img/hotels/hotel1.png" alt="hotel1" title="hotel1" class="Hotel__image ml-0" />
+    
+            @@include('_rating.html')
+    
+        </div><!-- End /.Banner-card__header -->
+    
+        @@include('_modal.html')
+
+    </div>
+
+    <!-- Start .Hotel-card-sidebar -->
+    <div class="Hotel-card-sidebar card--padd card--gray">
+
+        <!-- Start .Hotel-sidebar-address -->        
+        <div class="Hotel-sidebar--address">
+            <div class="title--default medium upper">АДРЕС:</div> 
+            <p class="Hotels__description text-left text--gray">3 Avenue Georges Bassinet, 69260 Charbonnières-les-Bains, Frankrike</p>            
+        </div><!-- End /.Hotel-sidebar-address -->  
+
+        <!-- Start .Hotel-sidebar-features -->  
+        <div class="Hotel-sidebar--features">
+            <div class="title--default medium upper">ОСОБЕННОСТИ:</div> 
+
+            @@include('_hotel-features.html')
+
+        </div><!-- End /.Hotel-sidebar-features -->  
+
+        <!-- Start .Hotel-sidebar-rating -->  
+        <div class="Hotel-sidebar--rating">
+            <div class="title--default medium upper">ОСОБЕННОСТИ:</div> 
+            <div class="Hotel-sidebar--stars">
+
+                @@include('_stars.html')
+
+            </div>
+
+        </div><!-- End /.Hotel-sidebar-rating -->  
+    </div>
+
+</div><!-- End /.Banner-card -->

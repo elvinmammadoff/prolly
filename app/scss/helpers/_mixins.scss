@@ -152,6 +152,18 @@
     display: flex;
     justify-content: center;
 }
+@mixin FlexJustifyEnd(){
+    display: flex;
+    justify-content: flex-end;
+}
+@mixin FlexAlignCenter(){
+    display: flex;
+    align-items: center;
+}
+@mixin FlexColumn(){
+    display: flex;
+    flex-direction: column;
+}
 @mixin FlexColumnAlignCenter(){
     display: flex;
     align-items: center;
@@ -182,6 +194,13 @@
 // Border Radius Mixin
 @mixin borderRadius50 {
 	border-radius: 50%;
+}
+
+// Text Limit Mixin
+@mixin textLimit {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 

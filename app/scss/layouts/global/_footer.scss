@@ -1,8 +1,15 @@
 // Footer Styles
-.Footer {
-    background-color: $primary-color;
-    padding: 1.375rem 0;
-    .container {
-        @include FlexJustifyBetween;
+footer {
+    margin-top: 90px;
+    padding: 13px 0;
+    .Menu {
+        &-item {
+            &__link {
+                &:before {
+                    top: -3px;
+                    bottom: unset;
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,55 @@
+.carousel {
+    &-indicators {
+        position: relative;
+        margin: 20px 0 15px;
+        justify-content: flex-start;
+        bottom: unset;
+        z-index: 2;
+        &__item {
+            margin-bottom: 20px;
+            height: 140px;
+            max-height: 140px;
+            overflow: hidden;
+            border: 5px solid $gray-lighten1;
+            border-radius: 4px;            
+            img {
+                height: 100%;
+                border-radius: 4px;     
+            }   
+        }
+    }
+    &-item {
+        height: 452px;
+        max-height: 452px;
+        overflow: hidden;
+        border: 5px solid $gray-lighten1;
+        border-radius: 4px;    
+        img {
+            height: 100%;
+            border-radius: 4px;    
+        }   
+    }
+    &-control {
+        &-next, 
+        &-prev {
+            top: 50%;
+            bottom: unset;
+            width: 53px;
+            height: 102px;
+            background-color: rgba($primary-color, .6);
+            opacity: 1;
+            transform: translateY(-50%);
+            &-icon {
+                display: none;
+            }
+        } 
+        &-prev {
+            left: 20px;
+            border-radius: 0 4px 4px 0;            
+        }
+        &-next {
+            right: 20px;
+            border-radius: 4px 0 0 4px;    
+        }
+    }  
+}

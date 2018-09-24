@@ -1,22 +1,48 @@
 // Buttons Styles
 .button {
-    margin-top: 0.874rem;
-    border-radius: 0;
+    background-image: linear-gradient(-180deg, #F5C305 2%, #E7A302 100%);
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 15px 22px;
+    @include textLimit;
+    max-width: 191px;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
     &:hover {
-        box-shadow: 0 0.5rem 1.813rem 0 rgba(0,0,0,.23);        
+        color: #fff;
     }
-    &--lg {
-        padding: 0.325rem 0.5rem;
+    &--medium {
+        max-width: 238px;
     }
-    &--orange {
-        background-color: $secondary-color;
-        border-color: $secondary-color;
+    &--large {
+        max-width: 311px;
+        font-size: 18px;
+        padding: 20px 30px;
+        margin-top: 40px;
+    }
+    &--block {
+        width: 100%;
+        max-width: 100%; 
+    }
+    &--border {
+        background: #fff;
+        border: 2px solid #EDB103;
+        box-shadow: 0 1px 4px 0 rgba(#EDB103, .04), 0 1px 0 0 rgba(#EDB103, .02);
+        border-radius: 6px;  
+        color: #EDB103;    
+        text-shadow: none;  
         &:hover {
-            background-color: $button-secondary-bg;
-            border: 0.063rem solid $button-secondary-border;
+            background-color: #EDB103;
+            color: #fff;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.10);    
         }
     }
-    &--default {
-        padding: 0.325rem 1.367rem;
+    &--icon {
+        padding: 15px 28px;
+        @include FlexJustifyBetween;        
     }
 }

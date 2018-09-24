@@ -7,10 +7,10 @@
 	z-index: 999;
 	margin-top: 0;
     top: 0;
-    background-color: $primary-color;
+    background-color: #fff;
 }
 #object {
-	background-color: #fff;
+	background-color: $secondary-color;
 	width: 1.875rem;
 	height: 1.875rem;
 	-webkit-animation: animate 1s infinite ease-in-out;

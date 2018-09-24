@@ -1,0 +1,106 @@
+// Testimonial Styles
+.Testimonial {
+    position: relative;
+}
+.testimonial {
+    position: relative;
+    z-index: 1;
+    &-multiple {
+        padding-top: 50px;
+        &__title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: auto!important;
+        }
+        &__item {
+            margin: 20px 15px;
+        }
+        &__review {
+            padding: 20px 30px;
+            background-color: #fff;
+            border: 1px solid rgba($shadow-dark, .02);
+            box-shadow: 0 1px 4px 0 rgba($shadow-dark, .1), 0 1px 0 0 rgba($shadow-dark, .02);
+            border-radius: 4px;    
+            position: relative;        
+        }
+        &__caret {
+            position: absolute;
+            bottom: 0;
+            box-sizing: border-box;
+            background: #fff;
+            &:after,
+            &:before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                left: -10px;
+                box-sizing: border-box;
+                border: 10px solid black;
+                border-color: transparent transparent #fff #fff;
+                transform-origin: 0 0;
+                transform: rotate(-45deg);
+              } 
+              &:after {
+                box-shadow: 0 1px 8px 0 rgba(32,27,23,.1);
+                z-index: -1;
+                } 
+          }       
+        &__text {
+            overflow: hidden;
+            font-size: 16px;
+            color: $gray-medium;
+            line-height: 27px;  
+            margin: 20px 0 0;    
+            height: 108px;
+            max-height: 108px;        
+        }
+        &__quote {
+            position: relative;          
+        }
+        &__icon {
+            position: absolute;
+            top: 0;
+            right: 0;      
+            margin-top: 10px;   
+        }
+        &__details {
+            margin-top: 30px;
+        }
+        &__user {
+            @include FlexAlignCenter;
+        }
+        &-avatar {
+            width: 66px;
+            min-width: 66px;
+            height: 66px;
+            @include borderRadius50;
+            overflow: hidden;
+            position: relative;
+            @include FlexCenter;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid rgba($shadow-dark, .02);
+            box-shadow: 0 1px 4px 0 rgba($shadow-dark, .15), 0 1px 0 0 rgba($shadow-dark, .02);            
+            &__image {
+                width: 56px;
+                min-width: 56px;
+                height: 56px;
+                @include borderRadius50;
+                object-fit: cover;
+            }
+        }
+        &__name {
+            color: $primary-color;
+            margin-bottom: 0;
+            line-height: 27px;
+            font-size: 16px; 
+        }
+        &__job {
+            font-size: 14px;
+            color: rgba($primary-color, .7);
+            line-height: 27px;                        
+        }
+    }    
+}

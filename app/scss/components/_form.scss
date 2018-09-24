@@ -1,62 +1,100 @@
-
 // Vertical Form With Materialize Effects Styles
 .Form {
+    &--row {
+        @include FlexJustifyBetween;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }
     &__group {
+        display: flex;
         width: 100%;
         padding: 0.438rem;
         position: relative;
-        padding: 0;
-        margin-bottom: 1.625rem;
+        padding: 0 10px;
+        margin: 10px 0;
+        &--one {
+            padding: 0;
+            margin: 0;
+        }
         &--focus {
             .Form {
                 &__label {
-                    opacity: 1;
                     font-size: 0.75rem;
                     transform: translateY(-0.25rem);
                     visibility: visible;
+                    color: $secondary-color;
+                    margin-top: 6px;
+                    padding-top: 4px;
                 }
                 &__input {
                     padding-top: 1.125rem;
                 }
             }
         }
+        &--half {
+            width: 50%;
+        }
     }
     &__input {
-        border: 0.063rem solid $secondary-color;
+        border: 2px solid $gray;
         display: block;
         width: 100%;
         font-size: 0.875rem;
-        height: 2.813rem;
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
+        border-radius: 2px 0 0 2px;
+        height: 46px;
+        padding-left: 15px;
+        padding-right: 15px;
         word-break: normal;
         background-color: white;
         color: #071330;
         outline: 0;
-        @include transition;
+        @include transition03S;
+        &--group {
+            border: 2px solid $gray-lighten4;
+            border-right: 0;
+        }
         &--textarea {
-            height: 9.688rem;
+            height: 164px;
         }
         &::placeholder {
             color: #838998
         }
         &:focus {
             outline: 0;
-            border-color: $primary-color;
+            border-color: $secondary-color;
         }
     }
     &__label {
-        font-size: 0.875rem;
-        font-weight: 300;
+        color: rgba($primary-color, .5); 
+        background-color: #fff; 
         transform: translateY(0.188rem);
         position: absolute;
         top: 0;
-        width: 100%;
-        color: $text2;
-        margin-top: 0.625rem;
-        padding: 0 0.8rem;
+        width: calc(100% - 24px);
+        padding: 10px 15px 0;
+        margin-left: 2px;
         z-index: 1;
-        @include transition;
+        cursor: text;
+        @include transition03S;
+        &--group {
+            font-size: 14px;            
+        }
+    }
+    &__submit {
+        width: 48px;
+        min-width: 48px;
+        height: 46px;
+        object-fit: cover;
+        box-shadow: 0 1px 4px 0 rgba(235,172,3,0.04), 0 1px 0 0 rgba(235,172,3,0.02);
+        border-radius: 0 2px 2px 0;   
+        border: none;   
+        cursor: pointer;
+        background: url(../img/icons/send.svg) no-repeat center center, linear-gradient(-180deg, #F5C305 2%, #E7A302 100%);;
+    }
+    &__send {
+        cursor: pointer;
+        height: 46px;
+        z-index: 2;
     }
 }
 

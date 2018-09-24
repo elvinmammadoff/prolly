@@ -11,12 +11,6 @@ var     gulp          = require('gulp'),
 		notify        = require("gulp-notify"),
 		rsync         = require('gulp-rsync'),
 		fileinclude   = require('gulp-file-include');
-		cache 		  = require('gulp-cache');
-		imagemin 	  = require('gulp-imagemin');
-		imageminPngquant = require('imagemin-pngquant');
-		imageminZopfli 	 = require('imagemin-zopfli');
-		imageminMozjpeg  = require('imagemin-mozjpeg');
-		imageminGiflossy = require('imagemin-giflossy');		
 
 gulp.task('browser-sync', function() {
 	browserSync({
@@ -61,12 +55,9 @@ gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/bootstrap/dist/js/bootstrap.min.js',
-		'app/libs/owl.carousel/dist/owl.carousel.min.js',
-		'app/libs/isotope-layout/dist/isotope.pkgd.min.js',
-		'app/libs/imagesloaded/imagesloaded.pkgd.min.js',
+		// 'app/libs/owl.carousel/dist/owl.carousel.min.js',
+		'app/libs/slick-carousel/slick/slick.min.js',
 		'app/js/burger-menu.min.js',
-		'app/libs/lightgallery/dist/js/lightgallery-all.min.js',
-		'app/libs/lightgallery/lib/jquery.mousewheel.min.js',
 		'app/js/common.js', // Always at the end	
 		])
 	.pipe(concat('scripts.min.js'))
@@ -87,57 +78,7 @@ gulp.task('watch', ['styles', 'js', 'image', 'fileinclude', 'browser-sync'], fun
 
 gulp.task('image', function() {
 	return gulp.src(['app/img/**/*.{gif,png,jpg}'])
-	.pipe(imagemin())
 	.pipe(gulp.dest('dist/img'))
-	.pipe(imagemin([
-
-		// jpg lossless
-		imagemin.jpegtran({
-			progressive: true
-		}),
-
-		//jpg very light lossy, use vs jpegtran
-		imageminMozjpeg({
-			quality: 90
-		}),
-
-		// svg
-		imagemin.svgo({
-			plugins: [
-				{removeViewBox: false},
-				{cleanupIDs: false}
-			]
-		}),
-
-		// png
-		imagemin.optipng({
-			optimizationLevel: 5
-		}),
-		imageminPngquant({
-			speed: 1,
-			quality: 98 //lossy settings
-		}),		
-		imageminZopfli({
-			more: true
-			// iterations: 50 // very slow but more effective
-		}),	
-
-		// gif
-		imagemin.gifsicle({
-			interlaced: true
-		}),
-		// imagemin.gifsicle({
-		//     interlaced: true,
-		//     optimizationLevel: 3
-		// }),
-
-		//gif very light lossy, use only one of gifsicle or Giflossy
-		imageminGiflossy({
-			optimizationLevel: 3,
-			optimize: 3, //keep-empty: Preserve empty transparent frames
-			lossy: 2
-		}),		
-	]))
 });
 
 // 5. Dist directory clean

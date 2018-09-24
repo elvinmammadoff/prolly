@@ -1,0 +1,141 @@
+// Banner Styles
+.Banner {
+    position: relative;
+    &-parallax {
+        min-height: 366px;
+        background: url('../img/banner.png') no-repeat top center;
+        background-size: cover;
+        // background-size: contain;
+        // background-attachment: fixed;       
+        @include FlexAlignCenter;  
+        &__image {
+            position: absolute;
+            top: 0;           
+            right: 0;
+            margin-right: -70px;
+        }
+        &__info { 
+            &--center {
+                @include FlexColumnCenter;                
+            }
+        }
+        &__title {
+            font-size: 41px;
+            color: $primary-color;
+            line-height: 50px;     
+            margin-bottom: 0;   
+            &--mark {
+                font-size: 42px;
+                color: #fff;
+                text-shadow: 0 4px 8px rgba(0,0,0,0.10);    
+                line-height: 52px;  
+                display: inline;
+                background-color: rgba(#000, .14);                      
+            }
+            &--inline {
+                position: relative;   
+                margin-left: 40px;   
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 40px;
+                    background-color: rgba(#000, .14);   
+                    z-index: 1;
+                    height: 50%;    
+                    margin-left: -40px;                
+                }                
+            }
+            &--small {
+                max-width: 634px;
+                padding: 8px 14px;
+            }
+        }
+        &__label {
+            font-weight: bold;
+            color: $secondary-color;
+        }
+        &__description { 
+            font-size: 18px;
+            color: rgba($primary-color, .6);
+            line-height: 28px;  
+            margin: 30px 0 0;      
+            &--white {
+                margin: 30px 0 0;     
+                font-weight: 500;
+                font-size: 16px;
+                color: rgba(255,255,255, .84);
+                line-height: 28px;
+                text-shadow: 0 4px 8px rgba(0,0,0,0.10);                    
+            } 
+        }
+        &__button {
+            max-width: 311px;
+            font-size: 16px;
+            padding: 18px 30px;
+            margin-top: 30px;
+        }
+    }
+    &-card {
+        &--details {
+            padding: 31px 30px 34px 18px;
+            .Banner-card {
+                &__header {
+                    @include FlexCenterBetween;
+                    margin-bottom: 40px;
+                }
+                &__body {
+                    padding-left: 12px;
+                }
+            }
+            .button {
+                margin-top: 30px;
+            }
+        }
+        &__header {
+            display: flex;
+        }
+        &__label {
+            padding: 13px 20px;
+            background: rgba($secondary-icon, .1);
+            border-radius: 2px;
+            margin-left: 30px;      
+            width: 100%;      
+        }
+        &__title {
+            color: $secondary-label; 
+            line-height: 18px;     
+            margin-bottom: 0;     
+            font-size: 16px;  
+        }
+        &-list {
+            &__item {
+                display: flex;
+                margin-top: 30px;
+                .icon {
+                    color: rgba($secondary-icon, .7);
+                    margin-right: 16px;
+                    width: 20px;
+                    min-width: 20px;
+                }
+            }
+            &__name {
+                color: rgba($primary-color, .8);       
+                margin-bottom: 0;   
+                line-height: 22px;       
+                font-size: 16px;               
+            }
+        }
+    }
+}
+.mark {
+    &-first {
+        left: -20px;
+        position: relative;
+        z-index: 2;
+        .semibold {
+            margin-left: 40px;
+        }
+    }
+}

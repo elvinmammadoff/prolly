@@ -1,0 +1,32 @@
+// Modal Styles
+.modal {
+    &-header {
+        padding: 0;
+        @include FlexCenterBetween;
+        .close {
+            background-color: $gray-lighten2;
+            color: #313133;
+            font-size: 16px;   
+            padding: 25px;
+            margin: 0;      
+            .icon {
+                width: 16px;
+                height: 16px;
+            }            
+        }
+    }
+    &-body {
+        padding: 0;
+        overflow: hidden;
+    }
+    &-title {
+        font-size: 16px;
+        color: rgba($primary-color, .85);
+        margin-left: 30px;      
+        strong {
+            font-size: 18px;
+            color: $primary-color;    
+            margin-right: 10px;        
+        }  
+    }
+}

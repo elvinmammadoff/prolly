@@ -1,0 +1,19 @@
+// Cover Styles
+.Cover {
+    &-parallax {
+        min-height: 130px;
+        &__title {
+            font-weight: 600;
+            font-size: 36px;
+            color: #fff;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.10);            
+        }
+        &__breadcrumb {
+            color: #fff;
+            font-size: 14px;
+            a {
+                color: #fff;
+            }
+        }
+    }
+}

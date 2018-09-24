@@ -1,157 +1,89 @@
-  
 // Navigation Styles
 //== Nav menu item outline animation on hover ==//
-
 .Menu {
     @include FlexCenterBetween;
     padding: 0;
     margin: 0;
     &-item {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      position: relative;
-      border: 0.063rem solid transparent;
-      @include transition03S;
-
-
-    //== Menu item outline animation on hover ==//    
-
-    &:hover {
-        .line {
-            &-1 {
-                animation: move1 1500ms infinite ease;
-            }
-            
-            &-2 { 
-                animation: move2 1500ms infinite ease;
-            }
-            
-            &-3 {
-                animation: move3 1500ms infinite ease;
-            }
-            
-            &-4 {
-                animation: move4 1500ms infinite ease;
-            }
-        }
-    }
-
-    &__link {
-      display: flex;
-      color: $primary-color;
-      text-decoration: none;
-      font-family: $default-font;
-      font-weight: bold;
-      text-transform: uppercase;
-      &:hover {
-        color: $secondary-color;        
-      }
-    }
-
-    .line {
-        &-1, &-2, &-3, &-4 {
-            content: "";
-            display: block;
-            position: absolute;
-            background-color: currentColor;
-            @include transition03S;
-        }
-    }
-
-    .line {
-        &-1 {
-            width: 0.063rem;
-            left: 0;
-            bottom: 0;
-        }
-        &-2 {
-            height: 0.063rem;
-            left: 0;
-            top: 0;
-        }
-        &-3 { 
-            width: 0.063rem;
-            right: 0;
-            top: 0;
-        }
-        &-4 {
-            height: 0.063rem;
-            right: 0;
-            bottom: 0;
-        }
-    }
-    }
-}
-
-.dropdown {
-    position: relative;
-    &:hover, &:focus, &:focus-within {
-        .dropdown-menu {
-            height: auto;
-            visibility: visible; 
-            opacity: 1;
-            z-index: 1;
-            transform: translateY(0);
-            transition-delay: 0s, 0s, 0.3s;    
-            color: $primary-color;  
-        }   
-    }
-    &-menu {
-        position: absolute;
-        list-style: none;
-        min-width: 160px;
-        background-color: $color-3;
-        box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
-        visibility: hidden; 
-        opacity: 0;
-        top: 100%;
-        left: 0;
-        transform: translateY(-0.5rem);
-        z-index: -1;
-        transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
         padding: 0;
+        margin: 0 0 0 40px;
+        list-style: none;
+        position: relative;
+        border: 0.063rem solid transparent;
+        @include transition03S;
         &__link {
-            padding: 6px 10px;
-            display: block;
-            color: $secondary-color;
-            border: 1px solid currentColor;
-            margin-top: -1px;
-            &:hover {
-                color: $primary-color;
-            }
-        }
-        &.show {
-            position: relative!important;
-            transform: none!important;
-            opacity: 1;
-            visibility: visible;
-            display: block;
-            .dropdown {
-                &-item {
-                    font-size: 13px;
-                }                
-            }
-        }
-    }  
-    &-toggle {
-        &:after {
-            content: none;
-        }
-        .icon {
-            transition: transform .2s;
-            transform: rotate(-90deg);             
+            display: flex;
+            color: $primary-color;
+            text-decoration: none;
+            font-family: $default-font; 
+            font-size: 15px;
+            font-weight: 500;
+            text-align: center;     
+            padding: 23px 0;   
         }
     }
-    &.show {
-        .dropdown {
-            &__link {
-                background-color: $secondary-color;
-                color: #fff;
+    &--line {
+        .Menu {
+            &-item {
+                &__link {           
+                    &:hover {
+                        color: $secondary-color;   
+                        &:before {
+                            left: 0;
+                            right: 0
+                        }     
+                    }
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        left: 50%;
+                        right: 50%;
+                        bottom: -3px;
+                        background: $secondary-color;
+                        height: 3px;
+                        transition-property: left, right;
+                        transition-duration: .3s;
+                        transition-timing-function: ease-out
+                    }
+                    &:focus {
+                        &:before {
+                            left: 0;
+                            right: 0
+                        }
+                    }
+                }
             }
-        }    
-        .icon {
-            transform: rotate(0);             
-        }    
+        }
+    }
+    &--node {
+        .Menu {
+            &-item {
+                &__link {           
+                    &:hover {
+                        color: $secondary-color;  
+                        &:before {
+                            opacity: 1;
+                        }  
+                    }
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        left: 50%;
+                        right: 50%;
+                        bottom: 17px;
+                        background: $secondary-color;
+                        height: 5px;
+                        width: 5px;
+                        min-width: 5px;
+                        object-fit: cover;
+                        opacity: 0;
+                        @include transition03S;
+                        @include borderRadius50;
+                    }
+                }
+            }
+        }
     }
 }

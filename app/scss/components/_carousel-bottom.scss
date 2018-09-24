@@ -1,0 +1,68 @@
+.carousel {
+    &-indicators {
+        position: relative;
+        margin: 22px 20px 25px;
+        justify-content: flex-start;
+        bottom: unset;
+        z-index: 2;
+        &__item {
+            margin-bottom: 20px;
+            height: 140px;
+            max-height: 140px;
+            overflow: hidden;
+            border: 3px solid transparent;
+            border-radius: 3px;    
+            margin: 0 8px;   
+            cursor: pointer;  
+            @include transition03S;  
+            &:hover,
+            &:focus,
+            &.active {
+                border-color: $secondary-score;
+            } 
+            img {
+                height: 100%;
+                border-radius: 3px;     
+            }   
+            &--mini {
+                width: 48px;
+                height: 48px;
+                max-width: 48px;
+                object-fit: cover;
+            }
+        }
+    }
+    &-item {
+        height: 412px;
+        max-height: 412px;
+        overflow: hidden;
+        border-radius: 4px;    
+        img {
+            height: 100%;
+            border-radius: 4px;    
+        }   
+    }
+    &-control {
+        &-next, 
+        &-prev {
+            top: 50%;
+            bottom: unset;
+            width: 53px;
+            height: 102px;
+            background-color: rgba($primary-color, .6);
+            opacity: 1;
+            transform: translateY(-50%);
+            &-icon {
+                display: none;
+            }
+        } 
+        &-prev {
+            left: 15px;
+            border-radius: 0 4px 4px 0;            
+        }
+        &-next {
+            right: 15px;
+            border-radius: 4px 0 0 4px;    
+        }
+    }  
+}

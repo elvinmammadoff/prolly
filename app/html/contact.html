@@ -4,35 +4,18 @@
 
 @@include('_components/_header.html')
 
-<main> 
+<main class="sticky"> 
     <article>
         
-        @@include('_components/_cover.html', {
+        @@include('_components/_cover-parallax.html', {
             "contact": true
-        })
+        })  
     
-        @@include('_components/_contact-info.html')
-    
-        <!-- =========================
-            4. Section - Contact Methods 
-        ============================== -->  
-        
-        <!-- Start .Contact__methods -->
-        <section class="Contact__methods">
-            <div class="container">
-                
-                @@include('_components/_contact-form.html')   
-
-            </div>
-    
-            @@include('_components/_contact-map.html')   
-        </section><!-- End /.Contact__methods -->
+        @@include('_components/_contact-details.html')
 
     </article>
 </main>
 
 @@include('_components/_footer.html')
 
-@@include('_components/_foot.html', {
-    "contact": true
-})
+@@include('_components/_foot.html')

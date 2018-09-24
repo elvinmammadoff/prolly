@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>star_favorite [#1499] copy 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="2.18829719%" x2="50%" y2="95.3103884%" id="linearGradient-1">
+            <stop stop-color="#E7E5EC" offset="0%"></stop>
+            <stop stop-color="#E4E2E9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Extra-large:-Desktops---12-col" transform="translate(-698.000000, -983.000000)" fill="url(#linearGradient-1)">
+            <g id="Group-15" transform="translate(165.000000, 676.000000)">
+                <g id="Group-13-Copy" transform="translate(0.000000, 258.000000)">
+                    <g id="Group-11" transform="translate(441.000000, 49.000000)">
+                        <g id="Group-10">
+                            <path d="M105.37648,9.7648 C105.034875,10.1112 104.879673,10.6104 104.959674,11.1 L105.475682,14.2328 C105.636484,15.208 104.892473,16 104.04846,16 C103.826057,16 103.596454,15.9448 103.37405,15.8232 L100.67401,14.344 C100.462807,14.2288 100.231603,14.1712 99.9996,14.1712 C99.7683965,14.1712 99.5371931,14.2288 99.32599,14.344 L96.6259497,15.8232 C96.4035464,15.9448 96.173943,16 95.9515397,16 C95.1075271,16 94.363516,15.208 94.5243184,14.2328 L95.0403261,11.1 C95.1203273,10.6104 94.965125,10.1112 94.6235199,9.7648 L92.4386873,7.5464 C91.5794745,6.6736 92.0538816,5.1528 93.2410993,4.9728 L96.2603443,4.516 C96.7323513,4.4448 97.1403574,4.136 97.3507605,3.6904 L98.7011806,0.8408 C98.9667846,0.28 99.4835923,0 99.9996,0 C100.516408,0 101.033215,0.28 101.298819,0.8408 L102.649239,3.6904 C102.859643,4.136 103.267649,4.4448 103.739656,4.516 L106.758901,4.9728 C107.946118,5.1528 108.420525,6.6736 107.561313,7.5464 L105.37648,9.7648 Z" id="star_favorite-[#1499]-copy-4"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

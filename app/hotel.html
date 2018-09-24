@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+
+    <!-- Required meta tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />      
+
+    <!-- Title -->
+    <title>Codeta - Hotel and Casino</title>
+
+    <!-- All Styles -->
+    <link rel="stylesheet" href="css/main.min.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="256x256"  href="img/favicon/android-chrome-256x256.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-chrome-192x192.png">    
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
+    <link rel="icon" type="image/png" href="img/favicon/favicon.ico" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#990100" />
+    <meta name="theme-color" content="#ffffff" />       
+    
+</head>
+<body class="d-flex flex-column justify-content-between">
+
+<!-- =========================
+    Pre-loader 
+============================== -->
+
+<!-- Start .loading -->
+<div id="loading">
+    <div class="loading__center">
+        <div class="loading__position">
+            <div id="object"></div>
+        </div>
+    </div>
+</div>
+<!-- End /.loading -->
+              
+
+<!-- =========================
+    Icons 
+============================== -->
+
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+
+        <!-- Start Icon Bet -->
+        <symbol id="icon-bet" viewBox="0 0 30 32">
+            <title>bet</title>
+            <path d="M26.63 9.264c0.217 0.060 0.446 0.094 0.682 0.094 1.393 0 2.527-1.124 2.527-2.506s-1.133-2.506-2.527-2.506c-1.393 0-2.527 1.124-2.527 2.506 0 0.205 0.025 0.404 0.072 0.594l-4.784 2.336-3.699-5.241c0.637-0.455 1.053-1.197 1.053-2.034 0-1.382-1.133-2.506-2.527-2.506s-2.527 1.124-2.527 2.506c0 0.832 0.411 1.57 1.042 2.026l-3.704 5.249-4.78-2.334c0.096-0.264 0.149-0.549 0.149-0.846 0-1.382-1.133-2.506-2.527-2.506s-2.527 1.124-2.527 2.506c0 1.382 1.133 2.506 2.527 2.506 0.18 0 0.356-0.019 0.526-0.055l2.94 8.2v2.193h-4.018v12.554h25.863v-12.554h-4.108v-2.166l2.874-8.015zM27.313 6.22c0.351 0 0.636 0.283 0.636 0.631s-0.285 0.631-0.636 0.631c-0.351 0-0.636-0.283-0.636-0.631s0.285-0.631 0.636-0.631zM2.554 7.232c-0.351 0-0.636-0.283-0.636-0.631s0.285-0.631 0.636-0.631c0.351 0 0.636 0.283 0.636 0.631s-0.285 0.631-0.636 0.631zM14.902 1.875c0.351 0 0.636 0.283 0.636 0.631s-0.286 0.631-0.636 0.631c-0.351 0-0.636-0.283-0.636-0.631s0.286-0.631 0.636-0.631zM25.974 21.321v8.804h-22.082v-8.804h22.082zM7.911 19.301v-1.273h13.956v1.273h-13.956zM22.154 16.153h-14.522l-2.302-6.422 5.002 2.442 4.561-6.464 4.561 6.464 5.002-2.442-2.302 6.422z"></path>
+            <path d="M13.496 23.044l-1.488 4.327-0.602-1.583 0.995-2.736h-1.27l-0.602 1.882-0.602-1.882h-1.262l0.978 2.736-0.585 1.583-1.496-4.327h-1.488l2.365 5.886h1.153l0.936-2.305 0.944 2.305h1.145l2.374-5.886z"></path>
+            <path d="M15.51 23.044h1.371v5.886h-1.371v-5.886z"></path>
+            <path d="M21.853 23.044v3.457l-2.766-3.457h-1.070v5.886h1.371v-3.366l2.733 3.366h1.103v-5.886z"></path>
+        </symbol><!-- End Icon Bet -->
+
+        <!-- Start Icon Blackjack -->
+        <symbol id="icon-blackjack" viewBox="0 0 25 32">
+            <title>blackjack</title>
+            <path d="M15.988 14.186c-0.751-1.157-1.917-1.799-3.283-1.808-0.808-0.008-1.607 0.212-2.306 0.628l-0.11 0.065-0.107-0.063c-0.693-0.412-1.48-0.629-2.277-0.629-0.010 0-0.021 0-0.031 0-1.366 0.010-2.532 0.652-3.284 1.808-0.776 1.194-0.799 2.606-0.063 3.873h-0c0.529 0.911 1.344 1.635 2.064 2.273 0.122 0.108 0.242 0.215 0.359 0.321 0.451 0.408 0.904 0.799 1.342 1.177 0.43 0.37 0.874 0.753 1.307 1.145l0.689 0.623 0.689-0.623c0.433-0.392 0.877-0.775 1.307-1.145 0.438-0.378 0.892-0.769 1.342-1.177 0.118-0.106 0.238-0.213 0.359-0.321 0.72-0.638 1.536-1.362 2.064-2.273 0.735-1.268 0.712-2.679-0.063-3.873zM14.306 17.16c-0.377 0.65-1.040 1.238-1.682 1.807-0.126 0.112-0.252 0.223-0.374 0.334-0.433 0.392-0.877 0.775-1.307 1.145-0.215 0.185-0.434 0.374-0.654 0.566-0.22-0.192-0.439-0.38-0.654-0.566-0.43-0.37-0.874-0.753-1.307-1.145-0.122-0.111-0.248-0.222-0.374-0.334-0.642-0.569-1.305-1.157-1.682-1.807h0c-0.39-0.672-0.385-1.38 0.014-1.995 0.396-0.609 0.92-0.908 1.602-0.913 0.005-0 0.011-0 0.016-0 0.422 0 0.842 0.117 1.219 0.342l1.166 0.688 1.168-0.69c0.379-0.226 0.807-0.342 1.232-0.34 0.682 0.005 1.206 0.303 1.602 0.912 0.399 0.614 0.404 1.323 0.014 1.995z"></path>
+            <path d="M3.971 0v3.614h-3.954v28.386h20.545v-3.614h3.954v-28.386h-20.546zM18.573 30.125h-16.567v-24.636h16.567v24.636zM22.527 26.511h-1.965v-22.898h-14.602v-1.739h16.567v24.636z"></path>
+        </symbol><!-- End Icon Blackjack -->
+
+        <!-- End Icon Poker -->
+        <symbol id="icon-poker" viewBox="0 0 32 32">
+            <title>poker</title>
+            <path d="M20.452 14.743c-0.408-0.745-1.025-1.327-1.57-1.839-0.090-0.084-0.179-0.168-0.265-0.251-0.336-0.323-0.674-0.631-1-0.93-0.318-0.291-0.647-0.591-0.967-0.898l-0.649-0.623-0.649 0.623c-0.32 0.307-0.649 0.608-0.967 0.898-0.326 0.298-0.664 0.607-1 0.93-0.087 0.083-0.176 0.167-0.265 0.251-0.545 0.513-1.163 1.094-1.571 1.84-0.572 1.047-0.553 2.262 0.052 3.25 0.595 0.972 1.52 1.511 2.606 1.519 0.289 0.003 0.577-0.034 0.857-0.107v1.095h1.875v-1.096c0.272 0.071 0.551 0.107 0.832 0.107 0.008 0 0.016 0 0.025-0 1.085-0.008 2.011-0.548 2.605-1.519 0.605-0.988 0.624-2.203 0.052-3.25zM18.801 17.013c-0.258 0.422-0.583 0.62-1.020 0.623-0.278 0.003-0.558-0.080-0.809-0.239l-0.971-0.608-0.973 0.61c-0.246 0.155-0.521 0.237-0.797 0.237-0.004 0-0.007 0-0.010 0-0.438-0.003-0.762-0.201-1.020-0.623-0.257-0.42-0.259-0.907-0.006-1.371 0.265-0.484 0.745-0.936 1.21-1.374 0.094-0.089 0.188-0.177 0.279-0.264 0.32-0.307 0.649-0.608 0.967-0.898 0.116-0.106 0.233-0.213 0.351-0.321 0.118 0.108 0.235 0.216 0.351 0.321 0.318 0.291 0.647 0.591 0.967 0.898 0.091 0.088 0.185 0.176 0.279 0.264 0.465 0.438 0.946 0.89 1.21 1.374 0.254 0.464 0.252 0.951-0.006 1.371z"></path>
+            <path d="M27.314 4.686c-3.022-3.022-7.040-4.686-11.314-4.686s-8.292 1.664-11.314 4.686c-3.022 3.022-4.686 7.040-4.686 11.314s1.664 8.292 4.686 11.314c3.022 3.022 7.040 4.686 11.314 4.686s8.292-1.664 11.314-4.686c3.022-3.022 4.686-7.040 4.686-11.314s-1.664-8.292-4.686-11.314zM30.092 15.045l-3.561 0.005c-0.111-1.244-0.439-2.427-0.946-3.511l3.082-1.783c0.799 1.614 1.298 3.401 1.425 5.289zM27.726 8.134l-3.082 1.783c-0.703-0.996-1.574-1.866-2.572-2.568l1.779-3.084c1.529 1.026 2.847 2.342 3.875 3.87zM16.938 1.907c1.888 0.124 3.676 0.621 5.291 1.418l-1.779 3.084c-1.084-0.505-2.267-0.831-3.512-0.941v-3.561zM15.063 1.907v3.561c-1.263 0.112-2.463 0.446-3.561 0.964l-1.794-3.075c1.632-0.815 3.442-1.324 5.355-1.45zM8.089 4.304l1.794 3.075c-0.994 0.707-1.86 1.582-2.558 2.582l-3.091-1.767c1.020-1.533 2.331-2.856 3.855-3.89zM3.301 9.819l3.091 1.767c-0.501 1.086-0.823 2.27-0.928 3.516l-3.561 0.014c0.117-1.889 0.607-3.679 1.397-5.297zM1.91 16.991l3.561-0.014c0.115 1.244 0.445 2.426 0.955 3.509l-3.077 1.791c-0.803-1.612-1.307-3.398-1.438-5.286zM4.294 23.896l3.078-1.791c0.706 0.994 1.579 1.862 2.578 2.561l-1.771 3.089c-1.531-1.022-2.853-2.335-3.885-3.86zM9.803 28.691l1.771-3.089c1.085 0.502 2.269 0.826 3.515 0.932l0.009 3.561c-1.889-0.12-3.678-0.612-5.295-1.404zM7.301 16c0-4.797 3.902-8.699 8.699-8.699s8.699 3.902 8.699 8.699c0 4.797-3.902 8.699-8.699 8.699s-8.699-3.902-8.699-8.699zM16.973 30.091l-0.009-3.561c1.244-0.113 2.427-0.442 3.51-0.95l1.787 3.080c-1.613 0.801-3.4 1.303-5.287 1.432zM23.881 27.716l-1.787-3.080c0.995-0.704 1.864-1.577 2.565-2.575l3.087 1.775c-1.024 1.53-2.339 2.85-3.865 3.88zM25.596 20.438c0.504-1.085 0.828-2.268 0.937-3.513l3.561-0.005c-0.122 1.889-0.616 3.677-1.411 5.293l-3.087-1.775z"></path>
+        </symbol><!-- End Icon Poker -->
+        
+        <!-- End Icon Roulette -->
+        <symbol id="icon-roulette" viewBox="0 0 36 32">
+            <title>roulette</title>
+            <path d="M33.171 24.434l-7.656-7.881h-2.423v-3.676h-2.23v-1.462c0.622-0.53 1.071-1.243 1.288-2.032h6.888v1.45h2.125v-1.45h1.564v-2.162h-1.564v-1.286h-2.125v1.286h-6.888c-0.217-0.79-0.665-1.503-1.288-2.032v-2.567c0-1.431-1.144-2.595-2.55-2.595s-2.55 1.164-2.55 2.595v2.567c-0.622 0.53-1.071 1.243-1.288 2.032h-6.793v-1.286h-2.125v1.286h-1.52v2.162h1.52v1.45h2.125v-1.45h6.793c0.217 0.79 0.665 1.503 1.288 2.032v1.462h-2.589v3.676h-2.423l-7.656 7.881h-3.095v7.539h36.267v-7.539h-3.095zM17.367 6.674l0.521-0.314v-3.738c0-0.238 0.191-0.432 0.425-0.432s0.425 0.194 0.425 0.432v3.738l0.521 0.314c0.572 0.345 0.914 0.954 0.914 1.629s-0.341 1.284-0.914 1.629l-0.521 0.314v2.632h-0.85v-2.632l-0.521-0.314c-0.572-0.345-0.914-0.954-0.914-1.629s0.342-1.284 0.914-1.629zM20.863 15.040h0.105v1.513h-5.668v-1.513h5.564zM11.638 18.715h5.612v3.689h2.125v-3.689h5.253l5.555 5.718h-24.1l5.555-5.718zM34.142 29.81h-32.017v-3.215h32.017v3.215z"></path>
+        </symbol><!-- End Icon Roulette -->
+        
+        <!-- End Icon Slot -->
+        <symbol id="icon-slot" viewBox="0 0 35 32">
+            <title>slot</title>
+            <path d="M22.792 8.017h-16.105v9.265h16.105v-9.265zM11.368 15.205h-2.618v-5.109h2.618v5.109zM16.049 15.205h-2.618v-5.109h2.618v5.109zM20.73 15.205h-2.618v-5.109h2.618v5.109z"></path>
+            <path d="M32.431 0.871c-1.527 0-2.769 1.225-2.769 2.73 0 1.146 0.72 2.128 1.737 2.533v6.233h-0.972v-2.838h-3.602v-9.512h-24.172v19.024h-2.654v8.994h4.151v3.95h21.178v-3.95h4.151v-8.994h-2.654v-1.757h3.602v-2.838h3.034v-8.311c1.017-0.404 1.737-1.387 1.737-2.533 0-1.505-1.242-2.73-2.769-2.73zM4.716 2.094h20.047v16.946h-20.047v-16.946zM23.266 29.906h-17.053v-1.872h17.053v1.872zM27.417 21.118v4.838h-25.355v-4.838h25.355zM28.366 15.205h-1.54v-3.599h1.54v3.599zM32.431 4.253c-0.389 0-0.706-0.292-0.706-0.652s0.317-0.652 0.706-0.652c0.389 0 0.706 0.292 0.706 0.652s-0.317 0.652-0.706 0.652z"></path>
+            <path d="M6.568 3.967h16.199v2.078h-16.199v-2.078z"></path>
+        </symbol><!-- End Icon Slot -->
+        
+        <!-- End Icon Close -->
+        <symbol id="icon-close" viewBox="0 0 32 32">
+            <title>close</title>
+            <path d="M18.314 16l13.686 13.686-2.315 2.314-13.685-13.686-13.686 13.686-2.314-2.314 13.685-13.686-13.685-13.686 2.314-2.314 13.686 13.686 13.685-13.686 2.315 2.314z"></path>
+        </symbol><!-- End Icon Close -->
+    
+    </defs>
+</svg>
+
+<!-- =========================
+    1. Section - Header 
+============================== -->
+
+<!-- Start .Navbar -->
+<header class="Navbar sticky-header">   
+
+    <!-- Start .Navbar__nav -->
+    <nav class="Navbar__nav">
+
+        <!-- Start .container -->
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <!-- Start .Navbar-logo -->
+            <div class="Navbar-logo">
+                
+                <!-- Start .Navbar-logo__image -->
+<h1 class="Navbar-logo__image">
+    <a href="/" title="Rafoz Farzo - Photography Template" class="Navbar-logo__link"></a>
+</h1><!-- End /.Navbar-logo__image-->
+            
+                <!-- Start .Navbar-logo__date -->
+<div class="Navbar-logo__date label label--gray">
+    <span class="semibold">09</span> сентября <span class="semibold">2018</span>
+</div><!-- End /.Navbar-logo__date -->
+
+<!-- Start .Navbar-logo__online -->
+<div class="Navbar-logo__online label label--gray">
+    <span class="online"></span>
+    <span class="semibold">152 игроков</span> онлайн сейчас 
+</div><!-- End /.Navbar-logo__online -->
+            
+            </div><!-- End /.Navbar-logo -->
+
+            <!-- =========================
+                Burger Right Menu Icon
+            ============================== -->                
+
+            <!-- Start .burger-icon -->
+            <div class="cd-nav-trigger burger-icon burger-icon--right">
+                <div class="cd-nav__divider"></div>
+                <div class="cd-nav__divider"></div> 
+                <div class="cd-nav__divider"></div>
+            </div><!-- End /.burger-icon -->     
+
+            <!-- Start .Menu -->
+<ul class="Menu Menu--node">
+
+    <!-- Start .Menu-item -->
+    <li class="Menu-item">
+        <a href="/" title="Главная" class="Menu-item__link">
+        Главная
+        </a>                
+    </li><!-- End /.Menu-item-->  
+
+    <!-- Start .Menu-item -->
+    <li class="Menu-item">
+        <a href="/about.html" title="О компании" class="Menu-item__link">
+        О компании 
+        </a>
+    </li><!-- End /.Menu-item-->    
+
+    <!-- Start .Menu-item -->
+    <li class="Menu-item">
+        <a href="/contact.html" title="Контакты" class="Menu-item__link">
+        Контакты
+        </a>
+    </li><!-- End /.Menu-item-->    
+
+</ul><!-- End /.Menu-->   
+
+        </u><!-- End /.container-->
+
+    </nav><!-- End /.Navbar__nav-->
+
+</header><!-- End /.Navbar-->
+
+
+<main class="sticky">
+    <article>
+        
+        <!-- =========================
+    2. Section - Banner 
+============================== -->
+
+<!-- Start .Banner -->
+<section class="Banner clearfix">
+
+    <!-- Start .Banner-parallax -->
+    <div class="Banner-parallax">
+        <div class="container">
+    
+            <!-- Start .Banner-parallax__info -->
+<div class="Banner-parallax__info Banner-parallax__info--center">
+
+    <!-- Start .Banner-parallax__title -->
+    <h2 class="Banner-parallax__title Banner-parallax__title--mark Banner-parallax__title--small text-center inline-block">
+        Вы хотите что-то <span class="semibold">сделать</span> в этом отеле? <span class="semibold">кнопку</span> ниже!
+    </h2><!-- End /.Banner-parallax__title -->
+
+    <!-- Start .Banner-parallax__description -->
+    <p class="Banner-parallax__description Banner-parallax__description--white">
+        Здесь вы можете найти отзывы экспертов о лучших отелях вас. 
+    </p><!-- End /.Banner-parallax__description -->
+
+    <!-- Start .Banner-parallax__button -->
+    <a href="hotel.html" class="Banner-parallax__button button" title="более">КОНСУЛЬТАЦИЯ ЗАПРОСОВ</a>
+    <!-- End /.Banner-parallax__button -->
+    
+</div><!-- Start /.Banner-parallax__info -->
+
+        </div>        
+    </div><!-- End /.Banner-parallax -->
+
+</section><!-- End /.Banner -->
+
+        <!-- =========================
+    3. Section - Hotel Card
+============================== -->
+
+<!-- Start .Banner -->
+<section class="Hotel-card section clearfix">
+    <div class="container">    
+        <div class="row">
+            <div class="col-lg-4">
+                
+                <!-- Start .Hotel-sidebar -->
+<div class="Hotel-sidebar card card--padd p-0">
+
+    <!-- Start .Banner-card -->
+<div class="Banner-card Banner-card--details">
+    
+    <div class="card--padd">
+
+        <!-- Start .Banner-card__header -->
+        <div class="Banner-card__header">
+            <img src="img/hotels/hotel1.png" alt="hotel1" title="hotel1" class="Hotel__image ml-0" />
+    
+            <!-- Start .Hotels__rating -->
+<div class="Hotels__rating">
+
+    <span class="semibold Hotels__score">9.8</span>
+    <span class="Hotels__status">Оценка</span>
+
+</div><!-- End /.Hotels__rating -->
+    
+        </div><!-- End /.Banner-card__header -->
+    
+        <!-- =========================
+    Bootstrap Mobdal  
+============================== -->
+
+<!-- Start .button -->
+<button class="button button--block button--border mt-0" data-toggle="modal" data-target="#exampleModalCenter">ПОКАЗАТЬ АДРЕС</button><!-- End /.button -->
+
+<!-- Start .modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalCenterTitle"><strong>Ритц Лондон</strong> 3 Avenue Georges Bassinet, 69260 Charbonnières-les-Bains, Frankrike</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <svg class="icon icon-close">
+                    <use xlink:href="#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="modal-body">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42555.27704370547!2d4.738953456567812!3d45.785677388527326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ed3dfa0b3be3%3A0x125fc5b76f2bc0a6!2s3+Avenue+Georges+Bassinet%2C+69260+Charbonni%C3%A8res-les-Bains%2C+France!5e0!3m2!1sen!2s!4v1537101762318" width="1110" height="570" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        </div>
+    </div>
+</div><!-- End /.modal -->   
+
+    </div>
+
+    <!-- Start .Hotel-card-sidebar -->
+    <div class="Hotel-card-sidebar card--padd card--gray">
+
+        <!-- Start .Hotel-sidebar-address -->        
+        <div class="Hotel-sidebar--address">
+            <div class="title--default medium upper">АДРЕС:</div> 
+            <p class="Hotels__description text-left text--gray">3 Avenue Georges Bassinet, 69260 Charbonnières-les-Bains, Frankrike</p>            
+        </div><!-- End /.Hotel-sidebar-address -->  
+
+        <!-- Start .Hotel-sidebar-features -->  
+        <div class="Hotel-sidebar--features">
+            <div class="title--default medium upper">ОСОБЕННОСТИ:</div> 
+
+            <!-- Start .Hotels-features -->
+<div class="Hotels-features">
+
+    <!-- Start .Hotels-features__item -->
+    <span class="Hotels-features__item active">
+        <svg class="icon icon-blackjack"><use xlink:href="#icon-blackjack"></use></svg>                                                    
+    </span><!-- End /.Hotels-features__item -->
+
+    <!-- Start .Hotels-features__item -->    
+    <span class="Hotels-features__item">
+        <svg class="icon icon-roulette"><use xlink:href="#icon-roulette"></use></svg>                                                    
+    </span><!-- End /.Hotels-features__item -->
+
+    <!-- Start .Hotels-features__item -->
+    <span class="Hotels-features__item">
+        <svg class="icon icon-poker"><use xlink:href="#icon-poker"></use></svg>                                                    
+    </span><!-- End /.Hotels-features__item -->
+
+    <!-- Start .Hotels-features__item -->
+    <span class="Hotels-features__item">
+        <svg class="icon icon-slot"><use xlink:href="#icon-slot"></use></svg>                                                    
+    </span><!-- End /.Hotels-features__item -->
+
+    <!-- Start .Hotels-features__item -->
+    <span class="Hotels-features__item">
+        <svg class="icon icon-bet"><use xlink:href="#icon-bet"></use></svg>                                                    
+    </span><!-- End /.Hotels-features__item -->
+
+</div><!-- End /.Hotels-features -->
+
+        </div><!-- End /.Hotel-sidebar-features -->  
+
+        <!-- Start .Hotel-sidebar-rating -->  
+        <div class="Hotel-sidebar--rating">
+            <div class="title--default medium upper">ОСОБЕННОСТИ:</div> 
+            <div class="Hotel-sidebar--stars">
+
+                
+<!-- Start .stars -->
+<div class="stars">
+    <img src="img/icons/star.svg" alt="star" title="star" class="stars__item" />
+    <img src="img/icons/star.svg" alt="star" title="star" class="stars__item" />
+    <img src="img/icons/star.svg" alt="star" title="star" class="stars__item" />
+    <img src="img/icons/star.svg" alt="star" title="star" class="stars__item" />
+    <img src="img/icons/star-deactive.svg" alt="star-deactive" title="star-deactive" class="stars__item" />
+</div><!-- End /.stars -->
+<span class="Hotels__status"><span class="medium">523</span> нравится</span>
+
+            </div>
+
+        </div><!-- End /.Hotel-sidebar-rating -->  
+    </div>
+
+</div><!-- End /.Banner-card -->  
+
+</div><!-- End /.Hotel-sidebar -->
+            
+            </div>
+            <div class="col-lg-8">
+                <div class="card card--padd">
+
+                    <!-- Start .Hotel-header -->
+<div class="Hotel-header pb-0">
+
+    <!-- Start .Hotel-header__title -->
+    <div class="Hotel-header__title">
+        <h3 class="title title--xmini medium mt-0">Ритц Лондон</h3>
+        <div class="text text--mb30 text--content">
+            <p>
+                Три ресторана и два бара расположены под одной крышей с 500 игровыми игровыми автоматами и 36 настольными играми.             
+            </p>
+            <p>
+                В гранд-кафе предлагается стоимость по цене от 17 $ (для сети), в которую входят вкусные пиццы и аппетитные ребра для барбекю и ассортимент пива в Монце Спортивный бар.             
+            </p>            
+        </div>    
+    </div><!-- End /.Hotel-header__title -->
+
+</div><!-- End /.Hotel-header --> 
+            
+                    <!-- Start .carousel -->
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="row">
+        <div class="col-lg-12">   
+
+            <!-- Start .carousel-inner -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="img/slider/slider1.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/slider/slider2.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/slider/slider3.jpg" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/slider/slider4.jpg" alt="Fourth slide">
+                </div>
+            </div><!-- End /.carousel-inner -->
+
+            <!-- Start .carousel-control-prev -->
+            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <img src="img/icons/arrow-left.svg" alt="arrow-left" title="arrow-left" />
+            </a><!-- End /.carousel-control-prev -->
+
+            <!-- Start .carousel-control-next -->
+            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <img src="img/icons/arrow-right.svg" alt="arrow-right" title="arrow-right" />
+            </a><!-- End /.carousel-control-next -->   
+
+        </div>
+        <div class="col-lg-12">
+
+            <!-- Start .carousel-indicators -->
+            <div class="carousel-indicators">
+                <div data-target="#carouselExampleFade" data-slide-to="0" class="carousel-indicators__item carousel-indicators__item--mini active">
+                    <img class="d-block w-100" src="img/slider/slider1.jpg" alt="First-slide" title="First-slide" />
+                </div>
+                <div data-target="#carouselExampleFade" data-slide-to="1" class="carousel-indicators__item carousel-indicators__item--mini">
+                    <img class="d-block w-100" src="img/slider/slider2.jpg" alt="Second-slide" title="Second-slide" />
+                </div>
+                <div data-target="#carouselExampleFade" data-slide-to="2" class="carousel-indicators__item carousel-indicators__item--mini">
+                    <img class="d-block w-100" src="img/slider/slider3.jpg" alt="Third-slide" title="Third-slide" />
+                </div>
+                <div data-target="#carouselExampleFade" data-slide-to="3" class="carousel-indicators__item carousel-indicators__item--mini">
+                    <img class="d-block w-100" src="img/slider/slider4.jpg" alt="Fourth-slide" title="Fourth-slide" />
+                </div>
+            </div>
+        </div><!-- End /.carousel-indicators -->
+    </div>   
+</div><!-- End /.carousel --> 
+
+            
+                    <div class="Hotel-content mb-0">
+    <div class="text text--mb30 text--content">
+        <p>
+            Подлинная кантонская кухня в Chi Kitchen также является отличным выбором для голодных клиентов. 
+        </p>
+        <p>
+            Любимые музыкальные сессии в баре Valley станут отличным расслаблением после долгого дня азартных игр, 
+            кроме того, вы можете расслабиться и посмотреть спортивные состязания в спортивном баре Monza на широких 208 «ЖК-стенка в лучшем качестве.
+        </p>
+    </div>
+</div>
+        
+                </div>                
+            </div>
+        </div>
+    </div>
+</section><!-- End /.Banner -->
+
+        <!-- =========================
+    4. Section - Review 
+============================== --> 
+
+<!-- Start .Review -->
+<section class="Review section clearfix">
+    <div class="container">
+
+        <!-- =========================
+    5. Section - Testimonial Multiple
+============================== -->
+
+<!-- Start .Testimonial -->
+<section class="Testimonial clearfix">
+    <div class="container">
+
+        <h3 class="testimonial-multiple__title title--medium medium">Эксперты</h3>
+        <div class="testimonial-multiple row">
+    
+            <!-- Start .testimonial-multiple__item -->
+            <div class="testimonial-multiple__item">
+    
+                <!-- Start .testimonial-multiple__review -->
+                <div class="testimonial-multiple__review">
+
+                    <!-- Start .testimonial-multiple-avatar -->
+                    <div class="testimonial-multiple-avatar">
+                        <img src="img/avatars/avatar.png" alt="Svea Dmitiros" title="Svea Dmitiros" class="testimonial-multiple-avatar__image" />
+                    </div><!-- End /.testimonial-multiple-avatar -->
+
+                    <!-- Start .testimonial-multiple__quote -->
+                    <div class="testimonial-multiple__quote">
+                        <h3 class="testimonial-multiple__text">Иисус - мексиканский профессиональный игрок в покер, который выиграл LAPT. Он трижды выигрывал финальный стол в национальных турнирах.</h3>                                                       
+        
+                    <!-- Start .testimonial-multiple__details -->
+                    <div class="testimonial-multiple__details">
+                        <h4 class="testimonial-multiple__name semibold">Svea Dmitiros</h4>  
+                        <span class="testimonial-multiple__job">BJT Vinnare</span>              
+                    </div><!-- End /.testimonial-multiple__details -->
+
+                    </div><!-- End /.testimonial-multiple__quote -->
+
+                </div><!-- End /.testimonial-multiple__review -->
+    
+            </div><!-- End /.testimonial-multiple__item -->
+
+    
+            <!-- Start .testimonial-multiple__item -->
+            <div class="testimonial-multiple__item">
+    
+                <!-- Start .testimonial-multiple__review -->
+                <div class="testimonial-multiple__review">
+
+                    <!-- Start .testimonial-multiple-avatar -->
+                    <div class="testimonial-multiple-avatar">
+                        <img src="img/avatars/avatar.png" alt="Svea Dmitiros" title="Svea Dmitiros" class="testimonial-multiple-avatar__image" />
+                    </div><!-- End /.testimonial-multiple-avatar -->
+
+                    <!-- Start .testimonial-multiple__quote -->
+                    <div class="testimonial-multiple__quote">
+                        <h3 class="testimonial-multiple__text">Питер известен среди профессиональных игроков за оригинальную систему, которую он изобрел. Вы, несомненно, удивлены, услышав, что он изначально ничего не знал о блэкджеке</h3>                                                       
+                       
+        
+                    <!-- Start .testimonial-multiple__details -->
+                    <div class="testimonial-multiple__details">
+                        <h6 class="testimonial-multiple__name semibold">Svea Dmitiros</h6>  
+                        <span class="testimonial-multiple__job">BJT Vinnare</span>              
+                    </div><!-- End /.testimonial-multiple__details -->
+ 
+                    </div><!-- End /.testimonial-multiple__quote -->
+
+                </div><!-- End /.testimonial-multiple__review -->
+    
+            </div><!-- End /.testimonial-multiple__item -->
+    
+            <!-- Start .testimonial-multiple__item -->
+            <div class="testimonial-multiple__item">
+    
+                <!-- Start .testimonial-multiple__review -->
+                <div class="testimonial-multiple__review">
+
+                    <!-- Start .testimonial-multiple-avatar -->
+                    <div class="testimonial-multiple-avatar">
+                        <img src="img/avatars/avatar.png" alt="Svea Dmitiros" title="Svea Dmitiros" class="testimonial-multiple-avatar__image" />
+                    </div><!-- End /.testimonial-multiple-avatar -->
+
+                    <!-- Start .testimonial-multiple__quote -->
+                    <div class="testimonial-multiple__quote">
+                        <h3 class="testimonial-multiple__text">Ребята смогли быстро погрузиться в специфику нашего бизнеса, изучить процессы, предложить улучшения и способы модернизации существующей инфраструктуры.</h3>                                                       
+        
+                    <!-- Start .testimonial-multiple__details -->
+                    <div class="testimonial-multiple__details">
+                        <h6 class="testimonial-multiple__name semibold">Svea Dmitiros</h6>  
+                        <span class="testimonial-multiple__job">BJT Vinnare</span>              
+                    </div><!-- End /.testimonial-multiple__details -->
+
+                    </div><!-- End /.testimonial-multiple__quote -->
+
+                </div><!-- End /.testimonial-multiple__review -->
+    
+            </div><!-- End /.testimonial-multiple__item -->
+    
+            <!-- Start .testimonial-multiple__item -->
+            <div class="testimonial-multiple__item">
+    
+                <!-- Start .testimonial-multiple__review -->
+                <div class="testimonial-multiple__review">
+
+                    <!-- Start .testimonial-multiple-avatar -->
+                    <div class="testimonial-multiple-avatar">
+                        <img src="img/avatars/avatar.png" alt="Svea Dmitiros" title="Svea Dmitiros" class="testimonial-multiple-avatar__image" />
+                    </div><!-- End /.testimonial-multiple-avatar -->
+
+                    <!-- Start .testimonial-multiple__quote -->
+                    <div class="testimonial-multiple__quote">
+                        <h3 class="testimonial-multiple__text">Ребята смогли быстро погрузиться в специфику нашего бизнеса, изучить процессы, предложить улучшения и способы модернизации существующей инфраструктуры.</h3>                                                       
+        
+                    <!-- Start .testimonial-multiple__details -->
+                    <div class="testimonial-multiple__details">
+                        <h6 class="testimonial-multiple__name semibold">Svea Dmitiros</h6>  
+                        <span class="testimonial-multiple__job">BJT Vinnare</span>              
+                    </div><!-- End /.testimonial-multiple__details -->
+
+                    </div><!-- End /.testimonial-multiple__quote -->
+
+                </div><!-- End /.testimonial-multiple__review -->
+    
+            </div><!-- End /.testimonial-multiple__item -->
+        </div>
+    </div>
+</section><!-- End /.Testimonial -->
+
+    </div>
+</section><!-- End /.Review -->
+
+
+        <!-- =========================
+    6. Section - Content 
+============================== -->
+
+<!-- Start .Content -->
+<section class="Content">
+    <div class="container">
+        <div class="Content__card card card--padd">
+            <h4 class="title--content semibold">Много раз игроки играют свои новые странные в неправильных казино на суше. Так почему бы нам не сделать эту работу?</h4>
+            <p class="text--content">Наши специалисты проводят непрерывные исследования, чтобы предложить вам наилучшие результаты. 
+                С помощью наших экспертов вы можете выбрать лучшие земельные казино в Швеции. 
+                В то время как разные игроки оценивают казино на основе своих собственных мнений, наши эксперты используют следующие критерии:
+            </p>
+            <ul class="list">
+                <li class="list__item">Среднее количество ежедневных игроков</li>
+                <li class="list__item">Различные типы игр</li>
+                <li class="list__item">Справедливые результаты</li>
+                <li class="list__item">Частые платежи</li>
+            </ul>
+            <h4 class="title--content semibold upper">бонусы</h4>
+            <p class="text--content">Некоторые казино предлагают множество различных бонусов, когда вы регистрируетесь в качестве члена своего клуба лояльности в качестве игрока. 
+                Вы также заметите, что некоторые казино предоставляют бесплатные игры игрокам при регистрации карты. 
+                Стоимость бесплатных бонусов может и, как правило, варьироваться в зависимости от случайных игр и различных выигрышей, но если вам повезет, вы можете выиграть до $ 500. 
+                Поэтому не забывайте искать бонусы перед регистрацией.
+            </p>
+        </div>
+    </div>
+</section><!-- End /.Content -->
+        
+    </article>
+</main>
+
+<!-- =========================
+    Mobile - Burger Right Menu  
+============================== -->
+
+<!-- Start .burger-menu -->
+<nav class="cd-nav-container burger-menu burger-menu--right" id="cd-nav">
+    <div class="burger-menu__open">
+
+        <!-- Start .burger-menu__logo -->
+        <a href="index.html" class="burger-menu__logo" title="Rafoz Farzo - Photography Template"></a><!-- End /.burger-menu__logo -->
+
+        <!-- Start .cd-close-nav -->
+        <div class="cd-nav-trigger cd-close-nav">
+            <div class="cd-nav__divider cd-nav__divider--top"></div>
+            <div class="cd-nav__divider cd-nav__divider--bottom"></div>
+        </div><!-- End /.cd-close-nav -->
+
+    </div>
+
+    <!-- Start .burger-menu__list -->
+    <ul class="burger-menu-list">
+
+        <!-- Start .burger-menu-list__item -->
+        <li class="burger-menu-list__item">
+            <a href="/" title="Главная" class="burger-menu-list__link">Главная</a>
+        </li><!-- End /.burger-menu-list__item -->
+
+        <!-- Start .burger-menu-list__item -->
+        <li class="burger-menu-list__item">
+            <a href="/about.html" title="О компании" class="burger-menu-list__link">О компании</a>
+        </li><!-- End /.burger-menu-list__item -->
+
+        <!-- Start .burger-menu-list__item -->
+        <li class="burger-menu-list__item">
+            <a href="/contact.html" title="Контакты" class="burger-menu-list__link">Контакты</a>
+        </li><!-- End /.burger-menu-list__item -->
+
+    </ul><!-- End /.burger-menu__list -->
+</nav><!-- End /.burger-menu -->
+
+<!-- Start .cd-overlay --> 
+<div class="cd-overlay"></div><!-- End /.cd-overlay --> 
+
+<!-- Start .scroll-up -->
+<div class="scroll-up">
+    <div class="scroll-up__icon"></div>
+</div><!-- End /.scroll-up -->
+    
+
+<!-- =========================
+    5. Section - Footer 
+============================== -->
+
+<!-- Start .Navbar -->
+<footer class="Navbar clearfix">   
+
+    <!-- Start .Navbar__nav -->
+    <nav class="Navbar__nav">
+
+        <!-- Start .container -->
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <!-- Start .Navbar-logo -->
+            <div class="Navbar-logo">
+                
+                <!-- Start .Navbar-logo__image -->
+<h1 class="Navbar-logo__image">
+    <a href="/" title="Rafoz Farzo - Photography Template" class="Navbar-logo__link"></a>
+</h1><!-- End /.Navbar-logo__image-->
+            
+            </div><!-- End /.Navbar-logo -->
+
+            <!-- Start .Form -->
+<form action="" method="" class="Form">
+
+    <!-- Start .Form__group -->
+    <div class="Form__group Form__group--one">
+        <input type="email" class="Form__input Form__input--group" id="email" name="email" spellcheck="false" autocapitalize="off" required>
+        <label for="email" class="Form__label Form__label--group">Электронная почта</label>
+        <span class="Form__send">        
+            <input type="submit" value="" class="Form__submit">
+        </span>
+    </div><!-- End /.Form__group -->    
+
+</form><!-- End /.Form -->
+
+        </u><!-- End /.container-->
+
+    </nav><!-- End /.Navbar__nav-->
+
+</footer><!-- End /.Navbar-->
+    
+
+<!-- =========================
+    Scripts   
+============================== --> 
+
+<!-- All Main Scripts -->
+<script src="js/scripts.min.js"></script>
+
+<!-- Mobile - Burger Right Menu -->
+<script src="js/burger-menu.min.js"></script>
+
+<!-- Common --> 
+<script src="js/common.js"></script>
+
+</body>
+</html>
